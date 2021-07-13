@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "@fitbit/sdk": "~5.0.0"
+  },
+  "fitbit": {
+    "appUUID": "509433a3-2500-44a6-89e9-dd0135542863",
+    "appType": "clockface",
+    "appDisplayName": "Digi",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "",
+    "requestedPermissions": [],
+    "buildTargets": [
+      "atlas",
+      "vulcan"
+    ],
+    "i18n": {
+      "en-US": {
+        "name": "Fitboy"
+      }
+    },
+    "defaultLanguage": "en-US"
+  }
+}
