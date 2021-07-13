@@ -3,12 +3,15 @@
     "@fitbit/sdk": "~5.0.0"
   },
   "fitbit": {
-    "appUUID": "509433a3-2500-44a6-89e9-dd0135542863",
+    "appUUID": "2d38820d-91d8-47a7-947f-0d8a12fa1cbe",
     "appType": "clockface",
-    "appDisplayName": "Digi",
+    "appDisplayName": "Fitboy",
     "iconFile": "resources/icon.png",
     "wipeColor": "",
-    "requestedPermissions": [],
+    "requestedPermissions": [
+      "access_heart_rate",
+      "access_activity"
+    ],
     "buildTargets": [
       "atlas",
       "vulcan"
