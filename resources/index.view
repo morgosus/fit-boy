@@ -5,12 +5,12 @@
   <text id="clock" x="30" y="25%" />
   <text id="date" x="30" y="35%" >2021-07-13 Tue</text>
 
-  <text id="steps" x="30" y="45%" font-size="16" text-length="10" >{ ... }</text>
-  <text id="minutes" x="30" y="55%" font-size="16" text-length="10" >{ ... }</text>
-  <text id="burn" x="30" y="75%" font-size="16" text-length="10" >{ ... }</text>
-  <text id="heart" x="30" y="85%" font-size="16" text-length="10" >{ ... }</text>
-  <text id="distance" x="100" y="45%" font-size="16" text-length="10" >{ ... }</text>
-  <text id="elevation" x="100" y="55%" font-size="16" text-length="10" >{ ... }</text>
+  <text id="distance" x="35" y="48%" font-size="16" text-length="10" />
+  <text id="burn" x="35" y="55%" font-size="16" text-length="10" />
+  <text id="heart" x="35" y="69%" font-size="16" text-length="10" />
+  <text id="steps" x="35" y="62%" font-size="16" text-length="10" />
+  <text id="minutes" x="120" y="48%" font-size="16" text-length="10" />
+  <text id="elevation" x="120" y="55%" font-size="16" text-length="10" />
 
   <rect width="84" height="20" x="0" y="302" opacity="0.25" />
   <rect width="84" height="20" x="252" y="302" opacity="0.25" />
@@ -23,7 +23,6 @@
   <rect width="32" height="10" x="286" y="66" x="182" y="190" />
   <rect width="32" height="10" x="286" y="66" x="233" y="90" />
   <rect width="32" height="10" x="286" y="66" x="233" y="237" />
-
 
   <text id="dweller" x="168" y="85%" >Name</text>
 </svg>
