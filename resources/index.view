@@ -1,10 +1,10 @@
 <svg class="background">
   <text id="system-info" x="168" y="10" >*** PIP-05 MICRO V1.0.0 ***</text>
-  <line x1="67" y1="16" x2="268" y2="16" stroke="#16FF42" />
+  <line x1="67" y1="16" x2="268" y2="16" />
   <text id="console" x="50%" y="12%" text-length="336" text-anchor="middle" font-size="16" />
 
-  <text id="clock" x="30" y="25%" />
-  <text id="date" x="30" y="35%" >2021-07-13 Tue</text>
+  <text id="clock" x="12" y="25%" />
+  <text id="date" x="12" y="35%" text-length="30"/>
 
   <image class="si lc" href="dist.png" x="12" y="48%-16" height="20" width="20" />
   <image class="si lc" href="brn.png" x="12" y="55%-16" height="20" width="20" />
@@ -32,5 +32,5 @@
   <rect class="v" width="32" height="10" x="235" y="90" />
   <rect class="v" width="32" height="10" x="235" y="237" />
 
-  <text id="dweller" x="168" y="85%" >Name</text>
+  <text id="dweller" class="v" x="168" y="85%" >Name</text>
 </svg>
