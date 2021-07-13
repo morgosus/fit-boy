@@ -1,13 +1,28 @@
-.background {
-  viewport-fill: red;
+* {
+  fill: #16FF42;
+  text-anchor: left;
+  font-family: System-Regular;
 }
 
-#myLabel {
-  font-size: 80;
-  font-family: System-Bold;
+.background {
+  viewport-fill: black;
+}
+
+#clock {
+  font-size: 40;
   text-length: 32;
+  fill: #16FF42;
+}
+#system-info {
   text-anchor: middle;
-  x: 50%;
-  y: 50%+40;
-  fill: white;
+  font-size: 8;
+}
+
+#date {
+  font-size: 20;
+}
+
+#dweller {
+  font-size: 16;
+  text-anchor: middle;
 }
