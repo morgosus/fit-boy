@@ -5,6 +5,13 @@
   <text id="clock" x="30" y="25%" />
   <text id="date" x="30" y="35%" >2021-07-13 Tue</text>
 
+  <image class="si lc" href="dist.png" x="12" y="48%-16" height="20" width="20" />
+  <image class="si lc" href="brn.png" x="12" y="55%-16" height="20" width="20" />
+  <image class="si lc" href="hr.png" x="12" y="69%-16" height="20" width="20" />
+  <image class="si lc" href="stps.png" x="12" y="62%-16" height="20" width="20" />
+  <image class="si rc" href="mins.png" x="97" y="48%-16" height="20" width="20" />
+  <image class="si rc" href="strs.png" x="97" y="55%-16" height="20" width="20" />
+
   <text id="distance" x="35" y="48%" font-size="16" text-length="10" />
   <text id="burn" x="35" y="55%" font-size="16" text-length="10" />
   <text id="heart" x="35" y="69%" font-size="16" text-length="10" />
