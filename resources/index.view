@@ -1,3 +1,29 @@
 <svg class="background">
-  <text id="myLabel" />
+  <text id="system-info" x="168" y="10" >*** PIP-05 MICRO V1.0.0 ***</text>
+  <line x1="67" y1="16" x2="268" y2="16" stroke="#16FF42" />
+
+  <text id="clock" x="30" y="25%" />
+  <text id="date" x="30" y="35%" >2021-07-13 Tue</text>
+
+  <text id="steps" x="30" y="45%" font-size="16" text-length="10" >{ ... }</text>
+  <text id="minutes" x="30" y="55%" font-size="16" text-length="10" >{ ... }</text>
+  <text id="burn" x="30" y="75%" font-size="16" text-length="10" >{ ... }</text>
+  <text id="heart" x="30" y="85%" font-size="16" text-length="10" >{ ... }</text>
+  <text id="distance" x="100" y="45%" font-size="16" text-length="10" >{ ... }</text>
+  <text id="elevation" x="100" y="55%" font-size="16" text-length="10" >{ ... }</text>
+
+  <rect width="84" height="20" x="0" y="302" opacity="0.25" />
+  <rect width="84" height="20" x="252" y="302" opacity="0.25" />
+  <rect width="160" height="20" x="88" y="302" opacity="0.25" />
+
+  <image href="boy.png" height="120" width="90" x="233-30" y="50%-60" />
+  <rect width="32" height="10" x="286" y="66" x="288" y="139" />
+  <rect width="32" height="10" x="286" y="66" x="288" y="190" />
+  <rect width="32" height="10" x="286" y="66" x="182" y="139" />
+  <rect width="32" height="10" x="286" y="66" x="182" y="190" />
+  <rect width="32" height="10" x="286" y="66" x="233" y="90" />
+  <rect width="32" height="10" x="286" y="66" x="233" y="237" />
+
+
+  <text id="dweller" x="168" y="85%" >Name</text>
 </svg>
