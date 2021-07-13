@@ -16,13 +16,13 @@
   <rect width="84" height="20" x="252" y="302" opacity="0.25" />
   <rect width="160" height="20" x="88" y="302" opacity="0.25" />
 
-  <image href="boy.png" height="120" width="90" x="233-30" y="50%-60" />
-  <rect width="32" height="10" x="286" y="66" x="288" y="139" />
-  <rect width="32" height="10" x="286" y="66" x="288" y="190" />
-  <rect width="32" height="10" x="286" y="66" x="182" y="139" />
-  <rect width="32" height="10" x="286" y="66" x="182" y="190" />
-  <rect width="32" height="10" x="286" y="66" x="233" y="90" />
-  <rect width="32" height="10" x="286" y="66" x="233" y="237" />
+  <image id="vault-boy" class="v" href="boy.png" height="120" width="90" x="205" y="50%-60" />
+  <rect class="v" width="32" height="10" x="288" y="139" />
+  <rect class="v" width="32" height="10" x="288" y="190" />
+  <rect class="v" width="32" height="10" x="182" y="139" />
+  <rect class="v" width="32" height="10" x="182" y="190" />
+  <rect class="v" width="32" height="10" x="235" y="90" />
+  <rect class="v" width="32" height="10" x="235" y="237" />
 
   <text id="dweller" x="168" y="85%" >Name</text>
 </svg>
