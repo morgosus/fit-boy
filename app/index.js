@@ -3,6 +3,13 @@ import document from "document";
 import { preferences } from "user-settings";
 import * as util from "../common/utils";
 
+import { display } from "display"; //turned off/on
+import { HeartRateSensor } from "heart-rate"; //bpm
+import { BodyPresenceSensor } from "body-presence"; //onWrist
+
+import { me as appbit } from "appbit"; //part of using today
+import { today } from "user-activity"; //steps, elevation, goals, ...
+
 // Update the clock every minute
 clock.granularity = "minutes";
 
