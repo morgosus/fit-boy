@@ -30,3 +30,21 @@ clock.ontick = (evt) => {
   let mins = util.zeroPad(today.getMinutes());
   clockLabel.text = `${hours}:${mins}`;
 }
+
+/*--- Sensors ---*/
+
+const sensors = [];
+
+const hrmData = document.getElementById("heart");
+
+if (HeartRateSensor) {
+  const hrm = new HeartRateSensor({ frequency: 1 });
+  hrm.addEventListener("reading", () => {
+    hrmData.text = hrm.heartRate ? hrm.heartRate + " bpm" : 0;
+  });
+  sensors.push(hrm);
+  hrm.start();
+} else {
+  hrmData.style.display = "{ ... }";
+}
+
