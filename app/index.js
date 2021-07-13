@@ -1,3 +1,4 @@
+//TODO: Add 'No user' on unequipping the watch (not on body)
 import clock from "clock";
 import document from "document";
 import { preferences } from "user-settings";
@@ -48,6 +49,23 @@ if (HeartRateSensor) {
   hrmData.style.display = "{ ... }";
 }
 
+
+//Todo: Condition this with onWrist
+if (appbit.permissions.granted("access_activity")) {
+  /*--- Today ---*/
+  let steps = document.getElementById("steps");
+  let minutes = document.getElementById("minutes");
+  let burn = document.getElementById("burn");
+  let distance = document.getElementById("distance");
+  let elevation = document.getElementById("elevation");
+
+  steps.text = today.adjusted.steps + " stp";
+  minutes.text = today.adjusted.activeZoneMinutes.total + " min";
+  burn.text = today.adjusted.calories + " kcal";
+  distance.text = today.adjusted.distance/1000 + " km";
+  elevation.text = today.adjusted.elevationGain + " flr";
+
+}
 
 /*--- Is the watch on the creature? ---*/
 
