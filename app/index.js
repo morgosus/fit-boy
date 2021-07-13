@@ -49,6 +49,19 @@ if (HeartRateSensor) {
 }
 
 
+/*--- Is the watch on the creature? ---*/
+
+if (BodyPresenceSensor) {
+  console.log("This device has a BodyPresenceSensor!");
+  const bodyPresence = new BodyPresenceSensor();
+  bodyPresence.addEventListener("reading", () => {
+    console.log(`The device is ${bodyPresence.present ? '' : 'not - TODO: Add a no user thing on watch if on while not on'} on the user's body.`);
+  });
+  bodyPresence.start();
+} else {
+  console.log("This device does NOT have a BodyPresenceSensor!");
+}
+
 /*--- Stop ---*/
 display.addEventListener("change", () => {
   // Automatically stop all sensors when the screen is off to conserve battery
