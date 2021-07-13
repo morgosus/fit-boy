@@ -48,3 +48,9 @@ if (HeartRateSensor) {
   hrmData.style.display = "{ ... }";
 }
 
+
+/*--- Stop ---*/
+display.addEventListener("change", () => {
+  // Automatically stop all sensors when the screen is off to conserve battery
+  display.on ? sensors.map(sensor => sensor.start()) : sensors.map(sensor => sensor.stop());
+});
