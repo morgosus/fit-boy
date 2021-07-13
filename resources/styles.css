@@ -12,6 +12,7 @@
   font-size: 40;
   text-length: 32;
 }
+
 #system-info {
   text-anchor: middle;
   font-size: 8;
@@ -24,4 +25,17 @@
 #dweller {
   font-size: 16;
   text-anchor: middle;
+}
+
+.si { /*stat image*/
+  fill: #16FF42;
+  opacity: 1;
+}
+
+.lc { /*left column*/
+
+}
+
+.rc { /*right column*/
+
 }
