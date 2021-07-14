@@ -10,6 +10,7 @@
     "wipeColor": "",
     "requestedPermissions": [
       "access_heart_rate",
+      "access_user_profile",
       "access_activity"
     ],
     "buildTargets": [
