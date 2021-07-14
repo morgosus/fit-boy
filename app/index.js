@@ -47,9 +47,8 @@ const wt = document.getElementById("weight");
 
 const bars = document.getElementsByClassName("v");
 
-
 // Update the <text> element every tick with the current time
-clock.ontick = (evt) => {
+clock.ontick = (evt) => { //Todo: add sensors to ticking? is that even needed?
   let today = evt.date;
   let hours = today.getHours();
   if (preferences.clockDisplay === "12h") {
@@ -61,58 +60,96 @@ clock.ontick = (evt) => {
   }
   let mins = util.zeroPad(today.getMinutes());
   clockLabel.text = `${hours}:${mins}`;
+
+
+  //TODO: Does this need to be within a tick? It only needs to update once a day at midnight...
+  let months = util.zeroPad(today.getMonth()+1);
+  let days = util.zeroPad(today.getDate());
+
+  let date = today.getFullYear() + "-" + months + "-" + days + " [" + today.getDay()+"/7]";
+  dateLabel.text = date;
+
+  //TODO: Same as above
+  //geolocation.getCurrentPosition(function(position) {
+  //  latitude.text = "Lat. " + position.coords.latitude
+  //  longitude.text = "Long. " + position.coords.longitude
+  //  heading.text = "Heading: " + position.coords.heading + "°"
+  //})
+
+
+  /*--- Battery charging ---*/
+  lvl.width = battery.chargeLevel*1.54;
 }
 
 /*--- Sensors ---*/
 
+
 const sensors = [];
 
-const hrmData = document.getElementById("heart");
+if (appbit.permissions.granted("access_heart_rate")) {
+  const hrmData = document.getElementById("heart");
 
-if (HeartRateSensor) {
   const hrm = new HeartRateSensor({ frequency: 1 });
   hrm.addEventListener("reading", () => {
-    hrmData.text = hrm.heartRate ? hrm.heartRate + " bpm" : 0;
+    hrmData.text = hrm.heartRate ? hrm.heartRate : 0;
   });
   sensors.push(hrm);
   hrm.start();
-} else {
-  hrmData.style.display = "{ ... }";
 }
-
 
 //Todo: Condition this with onWrist
 if (appbit.permissions.granted("access_activity")) {
   /*--- Today ---*/
-  let steps = document.getElementById("steps");
-  let minutes = document.getElementById("minutes");
-  let burn = document.getElementById("burn");
-  let distance = document.getElementById("distance");
-  let elevation = document.getElementById("elevation");
+  steps.text = today.adjusted.steps;
+  minutes.text = today.adjusted.activeZoneMinutes.total;
+  burn.text = today.adjusted.calories;
+  distance.text = (today.adjusted.distance/1000).toFixed(2);
+  elevation.text = today.adjusted.elevationGain;
 
-  steps.text = today.adjusted.steps + " stp";
-  minutes.text = today.adjusted.activeZoneMinutes.total + " min";
-  burn.text = today.adjusted.calories + " kcal";
-  distance.text = today.adjusted.distance/1000 + " km";
-  elevation.text = today.adjusted.elevationGain + " flr";
-
+  rhr.text = "HP " + user.restingHeartRate;
+  wt.text = "KG " + user.weight;
 }
 
-/*--- Is the watch on the creature? ---*/
 
-if (BodyPresenceSensor) {
-  console.log("This device has a BodyPresenceSensor!");
-  const bodyPresence = new BodyPresenceSensor();
-  bodyPresence.addEventListener("reading", () => {
-    console.log(`The device is ${bodyPresence.present ? '' : 'not - TODO: Add a no user thing on watch if on while not on'} on the user's body.`);
-  });
-  bodyPresence.start();
-} else {
-  console.log("This device does NOT have a BodyPresenceSensor!");
-}
+
+/*--- Is the watch on a creature? ---*/
+
+const bodyPresence = new BodyPresenceSensor();
+bodyPresence.addEventListener("reading", () => {
+  let i;
+
+  if(bodyPresence.present) {
+    Console.text = ""
+    for (i = 0; i < bars.length; i++) {
+      bars[i].style.opacity = 1;
+    }
+  } else {
+    Console.text = "> USER NOT DETECTED"
+    for (i = 0; i < bars.length; i++) {
+      bars[i].style.opacity = 0;
+    }
+  }
+
+});
+sensors.push(bodyPresence);
+bodyPresence.start();
 
 /*--- Stop ---*/
 display.addEventListener("change", () => {
   // Automatically stop all sensors when the screen is off to conserve battery
   display.on ? sensors.map(sensor => sensor.start()) : sensors.map(sensor => sensor.stop());
+});
+
+battery.addEventListener("change", () => {
+  // Battery changes
+
+  lvl.width = battery.chargeLevel*1.54;
+
+  if(battery.charging) {
+    Console.text = "> CHARGING ...";
+  } else if(!bodyPresence.present) {
+    Console.text = "> USER NOT DETECTED";
+  } else {
+    Console.text = "";
+  }
 });
