@@ -12,8 +12,7 @@
     "requestedPermissions": [
       "access_heart_rate",
       "access_activity",
-      "access_user_profile",
-      "access_location"
+      "access_user_profile"
     ],
     "buildTargets": [
       "vulcan",
