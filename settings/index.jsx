@@ -2,7 +2,7 @@ function fitboySettings(props) {
   return (
     <Page>
       <Section
-        title={<Text bold align="center">Fitboy Settings</Text>}>
+        title={<Text bold align="center">Fit-Boy Settings</Text>}>
         
         <ColorSelect
           settingsKey="color"
