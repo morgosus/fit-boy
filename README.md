@@ -9,7 +9,7 @@ A clock face for Fitbit Sense, modeled after the legendary Pip-Boy from the Fall
 
 ## Target Devices:
 - Fitbit Sense
-- (Fitbit Versa 3)
+- Fitbit Versa 3
 
 ## Requested Permissions:
 - heart rate access (live bpm)
