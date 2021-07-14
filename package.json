@@ -15,8 +15,8 @@
       "access_location"
     ],
     "buildTargets": [
-      "atlas",
-      "vulcan"
+      "vulcan",
+      "atlas"
     ],
     "i18n": {
       "en-US": {

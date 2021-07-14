@@ -1,5 +1,4 @@
 * {
-  fill: #16FF42;
   text-anchor: start;
   font-family: System-Regular;
 }
@@ -12,7 +11,6 @@
   font-size: 40;
   text-length: 32;
 }
-
 #system-info {
   text-anchor: middle;
   font-size: 8;
@@ -25,17 +23,18 @@
 #dweller {
   font-size: 16;
   text-anchor: middle;
+  text-length: 100
 }
 
+
 .si { /*stat image*/
-  fill: #16FF42;
   opacity: 1;
 }
 
 .lc { /*left column*/
-
+  
 }
 
 .rc { /*right column*/
-
+  
 }

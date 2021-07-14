@@ -5,6 +5,8 @@ import document from "document";
 import { preferences } from "user-settings";
 import * as util from "../common/utils";
 
+import * as messaging from "messaging"; //settings
+
 import { display } from "display"; //turned off/on
 import { HeartRateSensor } from "heart-rate"; //bpm
 import { BodyPresenceSensor } from "body-presence"; //onWrist
@@ -12,7 +14,7 @@ import { BodyPresenceSensor } from "body-presence"; //onWrist
 import { me as appbit } from "appbit"; //part of using today
 import { today } from "user-activity"; //steps, elevation, goals, ...
 import { user } from "user-profile"; //resting heart rate, gender, age, bmr, stride, weight, height, ...
-//also heartRateZone: Returns: "out-of-range" or "fat-burn" or "cardio" or "peak" or "below-custom" or "custom" or "above-custom"
+  //also heartRateZone: Returns: "out-of-range" or "fat-burn" or "cardio" or "peak" or "below-custom" or "custom" or "above-custom"
 
 //GPS
 //import { geolocation } from "geolocation";
@@ -26,10 +28,14 @@ clock.granularity = "minutes";
 const Console = document.getElementById("console");
 
 // Get a handle on the <text> element
+const background = document.getElementById("background");
+
 const clockLabel = document.getElementById("clock");
 const dateLabel = document.getElementById("date");
 
 const vaultBoy = document.getElementById("vault-boy");
+
+const dweller = document.getElementById("dweller");
 
 //const latitude = document.getElementById("latitude");
 //const longitude = document.getElementById("longitude");
@@ -60,29 +66,54 @@ clock.ontick = (evt) => { //Todo: add sensors to ticking? is that even needed?
   }
   let mins = util.zeroPad(today.getMinutes());
   clockLabel.text = `${hours}:${mins}`;
-
-
+  
+  
   //TODO: Does this need to be within a tick? It only needs to update once a day at midnight...
   let months = util.zeroPad(today.getMonth()+1);
   let days = util.zeroPad(today.getDate());
-
+  
   let date = today.getFullYear() + "-" + months + "-" + days + " [" + today.getDay()+"/7]";
   dateLabel.text = date;
-
+  
   //TODO: Same as above
   //geolocation.getCurrentPosition(function(position) {
   //  latitude.text = "Lat. " + position.coords.latitude
   //  longitude.text = "Long. " + position.coords.longitude
   //  heading.text = "Heading: " + position.coords.heading + "°"
   //})
-
-
+  
+  
   /*--- Battery charging ---*/
   lvl.width = battery.chargeLevel*1.54;
 }
 
-/*--- Sensors ---*/
+/*--- Settings ---*/
 
+// Message is received
+messaging.peerSocket.onmessage = evt => {
+  console.log(`App received: ${JSON.stringify(evt)}`);
+  if (evt.data.key === "color" && evt.data.newValue) {
+    let color = JSON.parse(evt.data.newValue);
+    console.log(`Setting background color: ${color}`);
+    background.style.fill = color;
+  } else if (evt.data.key === "name" && evt.data.newValue) {
+    let name = JSON.parse(evt.data.newValue);
+    console.log(`Setting name to: ${name.name}`);
+    dweller.text = name.name;
+  }
+};
+
+// Message socket opens
+messaging.peerSocket.onopen = () => {
+  console.log("App Socket Open");
+};
+
+// Message socket closes
+messaging.peerSocket.onclose = () => {
+  console.log("App Socket Closed");
+};
+
+/*--- Sensors ---*/
 
 const sensors = [];
 
@@ -99,15 +130,15 @@ if (appbit.permissions.granted("access_heart_rate")) {
 
 //Todo: Condition this with onWrist
 if (appbit.permissions.granted("access_activity")) {
-  /*--- Today ---*/
+  /*--- Today ---*/  
   steps.text = today.adjusted.steps;
   minutes.text = today.adjusted.activeZoneMinutes.total;
   burn.text = today.adjusted.calories;
   distance.text = (today.adjusted.distance/1000).toFixed(2);
   elevation.text = today.adjusted.elevationGain;
-
-  rhr.text = "HP " + user.restingHeartRate;
-  wt.text = user.weight + "KG";
+  
+  rhr.text = "HP " + user.restingHeartRate;
+  wt.text = user.weight + " KG";
 }
 
 
@@ -117,7 +148,7 @@ if (appbit.permissions.granted("access_activity")) {
 const bodyPresence = new BodyPresenceSensor();
 bodyPresence.addEventListener("reading", () => {
   let i;
-
+  
   if(bodyPresence.present) {
     Console.text = ""
     for (i = 0; i < bars.length; i++) {
@@ -142,9 +173,9 @@ display.addEventListener("change", () => {
 
 battery.addEventListener("change", () => {
   // Battery changes
-
+  
   lvl.width = battery.chargeLevel*1.54;
-
+  
   if(battery.charging) {
     Console.text = "> CHARGING ...";
   } else if(!bodyPresence.present) {
