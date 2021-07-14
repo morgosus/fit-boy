@@ -20,6 +20,9 @@
   <text id="minutes" x="120" y="48%" font-size="16" text-length="10" />
   <text id="elevation" x="120" y="55%" font-size="16" text-length="10" />
 
+  <text id="resting" x="81" y="318" font-size="16" text-length="10" text-anchor="end" />
+  <text id="weight" x="255" y="318" font-size="16" text-length="10" text-anchor="start" />
+
   <rect width="84" height="20" x="0" y="302" opacity="0.25" />
   <rect width="84" height="20" x="252" y="302" opacity="0.25" />
   <rect width="160" height="20" x="88" y="302" opacity="0.25" />
