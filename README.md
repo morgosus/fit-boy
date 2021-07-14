@@ -1,5 +1,7 @@
 # Fitboy
 
+![Preview](github/alpha.png)
+
 ## Description
 A clock face for Fitbit Sense, modeled after the legendary Pipboy from the Fallout Series by Fallout Series by Bethesda. Built using the Fitbit Studio and Fitbit OS Simulator.
 
