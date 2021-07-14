@@ -1,4 +1,6 @@
-# Fitboy
+Now available within the [Fitbit Gallery](https://gallery.fitbit.com/details/2d38820d-91d8-47a7-947f-0d8a12fa1cbe) as a private upload.
+
+# Fit-Boy
 
 ![Preview](github/alpha.png)
 
@@ -17,7 +19,7 @@ A clock face for Fitbit Sense, modeled after the legendary Pip-Boy from the Fall
 
 ## Features
 - Vault Boy with limb health bars for the proper Pip-Boy feel
-- You may type in your name to signify that you own this Fitboy
+- You may type in your name to signify that you own this Fit-Boy
 
 ### Clock
 - Supports both 12 and 24-hour format
