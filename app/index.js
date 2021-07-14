@@ -1,4 +1,5 @@
 //TODO: Add 'No user' on unequipping the watch (not on body)
+//TODO: Refactor / Separate
 import clock from "clock";
 import document from "document";
 import { preferences } from "user-settings";
