@@ -52,7 +52,7 @@ A clock face for Fitbit Sense, modeled after the legendary Pip-Boy from the Fall
 - [x] Customizable name
 - [x] More color schemes
 - [ ] Even more color schemes
-- [ ] Fix black screen on first run (no default color selected)
+- [x] Fix black screen on first run (no default color selected)
 - [ ] AM/PM for the 12-hour clock format
 - [ ] Support Sunday as the first day
 - [ ] Use the limb health bars as goal bars
