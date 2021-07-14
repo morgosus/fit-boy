@@ -3,7 +3,7 @@
 ![Preview](github/alpha.png)
 
 ## Description
-A clock face for Fitbit Sense, modeled after the legendary Pipboy from the Fallout Series by Fallout Series by Bethesda. Built using the Fitbit Studio and Fitbit OS Simulator.
+A clock face for Fitbit Sense, modeled after the legendary Pip-Boy from the Fallout Series by Fallout Series by Bethesda. Built using the Fitbit Studio and Fitbit OS Simulator.
 
 ## Target Devices:
 - Fitbit Sense
@@ -16,10 +16,11 @@ A clock face for Fitbit Sense, modeled after the legendary Pipboy from the Fallo
 - location (GPS)
 
 ## Features
-- Vault Boy with limb health bars for the proper pipboy feel
+- Vault Boy with limb health bars for the proper Pip-Boy feel
+- You may type in your name to signify that you own this Fitboy
 
 ### Clock
-- Supports both 12 and 24 hour format
+- Supports both 12 and 24-hour format
 
 ### Date and Day Format
 - YYYY-MM-DD [N/7], N ∈ <1, 7>, where 1 = Monday and 7 = Sunday
@@ -36,7 +37,9 @@ A clock face for Fitbit Sense, modeled after the legendary Pipboy from the Fallo
 - Battery charge displayed instead of the LEVEL progress bar
 
 ### Color Schemes
-- Fallout 4 green (#16FF42)
+- Fallout 4 (#16FF42)
+- Fallout: New Vegas (#FFB641)
+- Fallout 3 (#1AFF80)
 
 ### "Console"
 - Displays "> CHARGING ..." when charging
@@ -44,9 +47,10 @@ A clock face for Fitbit Sense, modeled after the legendary Pipboy from the Fallo
     - Also hides the vault boy and name
     
 ### WIP
-- [ ] Customizable name
-- [ ] More color schemes
-- [ ] AM/PM for the 12h clock format
+- [x] Customizable name
+- [x] More color schemes
+- [ ] Even more color schemes
+- [ ] AM/PM for the 12-hour clock format
 - [ ] Support Sunday as the first day
 - [ ] Use the limb health bars as goal bars
   - [ ] Active Zone Minutes
