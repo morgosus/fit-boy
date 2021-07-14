@@ -23,8 +23,30 @@ import { battery } from "power";
 // Update the clock every minute
 clock.granularity = "minutes";
 
+const Console = document.getElementById("console");
+
 // Get a handle on the <text> element
 const clockLabel = document.getElementById("clock");
+const dateLabel = document.getElementById("date");
+
+const vaultBoy = document.getElementById("vault-boy");
+
+//const latitude = document.getElementById("latitude");
+//const longitude = document.getElementById("longitude");
+//const heading = document.getElementById("heading");
+
+const lvl = document.getElementById("lvl");
+
+const steps = document.getElementById("steps");
+const minutes = document.getElementById("minutes");
+const burn = document.getElementById("burn");
+const distance = document.getElementById("distance");
+const elevation = document.getElementById("elevation");
+const rhr = document.getElementById("resting");
+const wt = document.getElementById("weight");
+
+const bars = document.getElementsByClassName("v");
+
 
 // Update the <text> element every tick with the current time
 clock.ontick = (evt) => {
