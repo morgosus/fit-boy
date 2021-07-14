@@ -1,5 +1,5 @@
 <svg class="background" id="background">
-  <text id="system-info" x="168" y="10" >*** PIP-05 MICRO V1.0.0 ***</text>
+  <text id="system-info" x="168" y="10" >*** FIT-01 MICRO V1.1.0 ***</text>
   <line x1="67" y1="16" x2="268" y2="16" />
   <text id="console" x="50%" y="12%" text-length="336" text-anchor="middle" font-size="16" />
   
