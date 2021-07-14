@@ -43,5 +43,5 @@
   <text id="longitude" x="301" y="85%" text-anchor="end" font-size="10" text-length="30"  />
   <text id="heading" x="168" y="75%" text-anchor="middle" font-size="10" text-length="30"  />-->
   
-  <text id="dweller" class="v" x="168" y="85%" >Name</text>
+  <text id="dweller" class="v" x="168" y="85%" >Vault 636</text>
 </svg>
