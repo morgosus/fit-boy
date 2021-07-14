@@ -11,6 +11,14 @@ import { BodyPresenceSensor } from "body-presence"; //onWrist
 
 import { me as appbit } from "appbit"; //part of using today
 import { today } from "user-activity"; //steps, elevation, goals, ...
+import { user } from "user-profile"; //resting heart rate, gender, age, bmr, stride, weight, height, ...
+//also heartRateZone: Returns: "out-of-range" or "fat-burn" or "cardio" or "peak" or "below-custom" or "custom" or "above-custom"
+
+//GPS
+//import { geolocation } from "geolocation";
+
+//Battery
+import { battery } from "power";
 
 // Update the clock every minute
 clock.granularity = "minutes";
