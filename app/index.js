@@ -107,7 +107,7 @@ if (appbit.permissions.granted("access_activity")) {
   elevation.text = today.adjusted.elevationGain;
 
   rhr.text = "HP " + user.restingHeartRate;
-  wt.text = "KG " + user.weight;
+  wt.text = user.weight + "KG";
 }
 
 
