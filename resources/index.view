@@ -39,5 +39,9 @@
   <rect class="v" width="32" height="10" x="235" y="90" />
   <rect class="v" width="32" height="10" x="235" y="237" />
 
+  <!--<text id="latitude" x="35" y="85%" text-anchor="start" font-size="10" text-length="30"  />
+  <text id="longitude" x="301" y="85%" text-anchor="end" font-size="10" text-length="30"  />
+  <text id="heading" x="168" y="75%" text-anchor="middle" font-size="10" text-length="30"  />-->
+
   <text id="dweller" class="v" x="168" y="85%" >Name</text>
 </svg>
