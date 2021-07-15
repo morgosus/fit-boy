@@ -53,17 +53,15 @@ const wt = document.getElementById("weight");
 
 const bars = document.getElementsByClassName("v");
 
+let dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
 // Update the <text> element every tick with the current time
 clock.ontick = (evt) => { //Todo: add sensors to ticking? is that even needed?
   let today = evt.date;
   let hours = today.getHours();
-  if (preferences.clockDisplay === "12h") {
-    // 12h format
-    hours = hours % 12 || 12;
-  } else {
-    // 24h format
-    hours = util.zeroPad(hours);
-  }
+  
+  hours = util.zeroPad(hours);
+  
   let mins = util.zeroPad(today.getMinutes());
   clockLabel.text = `${hours}:${mins}`;
   
@@ -72,16 +70,8 @@ clock.ontick = (evt) => { //Todo: add sensors to ticking? is that even needed?
   let months = util.zeroPad(today.getMonth()+1);
   let days = util.zeroPad(today.getDate());
   
-  let date = today.getFullYear() + "-" + months + "-" + days + " [" + today.getDay()+"/7]";
-  dateLabel.text = date;
-  
-  //TODO: Same as above
-  //geolocation.getCurrentPosition(function(position) {
-  //  latitude.text = "Lat. " + position.coords.latitude
-  //  longitude.text = "Long. " + position.coords.longitude
-  //  heading.text = "Heading: " + position.coords.heading + "°"
-  //})
-  
+  let date = today.getFullYear() + "-" + months + "-" + days + " " + dayNames[today.getDay()];
+  dateLabel.text = date;  
   
   /*--- Battery charging ---*/
   lvl.width = battery.chargeLevel*1.54;
@@ -91,26 +81,24 @@ clock.ontick = (evt) => { //Todo: add sensors to ticking? is that even needed?
 
 // Message is received
 messaging.peerSocket.onmessage = evt => {
-  console.log(`App received: ${JSON.stringify(evt)}`);
+  //console.log(`App received: ${JSON.stringify(evt)}`);
   if (evt.data.key === "color" && evt.data.newValue) {
     let color = JSON.parse(evt.data.newValue);
-    console.log(`Setting background color: ${color}`);
     background.style.fill = color;
   } else if (evt.data.key === "name" && evt.data.newValue) {
     let name = JSON.parse(evt.data.newValue);
-    console.log(`Setting name to: ${name.name}`);
     dweller.text = name.name;
   }
 };
 
 // Message socket opens
 messaging.peerSocket.onopen = () => {
-  console.log("App Socket Open");
+  //console.log("App Socket Open");
 };
 
 // Message socket closes
 messaging.peerSocket.onclose = () => {
-  console.log("App Socket Closed");
+  //console.log("App Socket Closed");
 };
 
 /*--- Sensors ---*/
@@ -150,14 +138,24 @@ bodyPresence.addEventListener("reading", () => {
   let i;
   
   if(bodyPresence.present) {
-    Console.text = ""
     for (i = 0; i < bars.length; i++) {
       bars[i].style.opacity = 1;
     }
+    
+    if(battery.charging) {
+      Console.text = "> CHARGING ..."
+    } else {
+      Console.text = ""
+    }
   } else {
-    Console.text = "> USER NOT DETECTED"
     for (i = 0; i < bars.length; i++) {
       bars[i].style.opacity = 0;
+    }
+    
+    if(battery.charging) {
+      Console.text = "> CHARGING ..."
+    } else {
+      Console.text = "> USER NOT DETECTED"
     }
   }
 
@@ -165,11 +163,30 @@ bodyPresence.addEventListener("reading", () => {
 sensors.push(bodyPresence);
 bodyPresence.start();
 
-/*--- Stop ---*/
+/*--- Display ---*/
 display.addEventListener("change", () => {
-  // Automatically stop all sensors when the screen is off to conserve battery
-  display.on ? sensors.map(sensor => sensor.start()) : sensors.map(sensor => sensor.stop());
+  // Probably better to run these things once when the screen turns on than every second...
+  if(display.on) {
+    wake();
+  } else {
+    sleep();
+  }
 });
+
+function wake() {
+  console.log("Display is on.");
+  sensors.map(sensor => sensor.start()); //sensors
+  updateStats();
+}
+
+function updateStats() {
+  
+}
+
+function sleep() {
+  console.log("Display is off.");  
+  sensors.map(sensor => sensor.stop()); //sensors
+}
 
 battery.addEventListener("change", () => {
   // Battery changes

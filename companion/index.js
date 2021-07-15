@@ -3,13 +3,13 @@ import { settingsStorage } from "settings";
 
 // Message socket opens
 messaging.peerSocket.onopen = () => {
-  console.log("Companion Socket Open");
+  //console.log("Companion Socket Open");
   restoreSettings();
 };
 
 // Message socket closes
 messaging.peerSocket.onclose = () => {
-  console.log("Companion Socket Closed");
+  //console.log("Companion Socket Closed");
 };
 
 // A user changes settings
