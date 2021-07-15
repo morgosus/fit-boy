@@ -1,6 +1,4 @@
-Now available within the [Fitbit Gallery](https://gallery.fitbit.com/details/2d38820d-91d8-47a7-947f-0d8a12fa1cbe) as a private upload.
-
-# Fit-Boy
+# Fit-Boy: Now available within the [Fitbit Gallery](https://gallery.fitbit.com/details/2d38820d-91d8-47a7-947f-0d8a12fa1cbe).
 
 ![Preview](github/1.1.0.png)
 ![Preview](github/1.1.0-NW.png)
