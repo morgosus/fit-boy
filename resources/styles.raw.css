@@ -1,0 +1,48 @@
+.background {
+    viewport-fill: black;
+    fill: #16FF42;
+    font-family: System-Regular;
+}
+
+/* clock */
+#clock {
+    font-size: 40;
+    text-length: 32;
+    font-family: System-Bold;
+}
+
+#date {
+    font-size: 20;
+}
+
+
+/* stats */
+.s { font-size: 16; text-length: 10; }
+
+.i { /* stat image */ opacity: 1; height: 20; width: 20; }
+.i.lc { x: 12 }
+.i.rc { x: 97 }
+
+/* boy */
+#vault-boy { width: 90; height: 120; x: 205; y: 108; }
+
+.b { /* bar */
+    width: 32;
+    height: 10;
+}
+
+.b.rc { x: 288; }
+.b.lc { x: 182; }
+.b.mc { x: 235; }
+
+/* misc */
+#system-info {
+    text-anchor: middle;
+    font-size: 8;
+}
+
+#dweller {
+    font-size: 16;
+    text-anchor: middle;
+    text-length: 100;
+}

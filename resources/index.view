@@ -1,47 +1,35 @@
 <svg class="background" id="background">
-  <text id="system-info" x="168" y="10" >*** FIT-01 MICRO V1.1.0 ***</text>
+  <text id="system-info" x="168" y="10" >*** FIT-01 MICRO V1.2.0 ***</text>
   <line x1="67" y1="16" x2="268" y2="16" />
   <text id="console" x="50%" y="12%" text-length="336" text-anchor="middle" font-size="16" />
-  
   <text id="clock" x="12" y="25%" />
   <text id="date" x="12" y="35%" text-length="30"/>
-    
-  <image class="si lc" href="dist.png" x="12" y="48%-16" height="20" width="20" />
-  <image class="si lc" href="brn.png" x="12" y="55%-16" height="20" width="20" />
-  <image class="si lc" href="hr.png" x="12" y="69%-16" height="20" width="20" />
-  <image class="si lc" href="stps.png" x="12" y="62%-16" height="20" width="20" />
-  <image class="si rc" href="mins.png" x="97" y="48%-16" height="20" width="20" />
-  <image class="si rc" href="strs.png" x="97" y="55%-16" height="20" width="20" />
-  
-  <text id="distance" x="35" y="48%" font-size="16" text-length="10" />
-  <text id="burn" x="35" y="55%" font-size="16" text-length="10" />
-  <text id="heart" x="35" y="69%" font-size="16" text-length="10" />
-  <text id="steps" x="35" y="62%" font-size="16" text-length="10" />
-  <text id="minutes" x="120" y="48%" font-size="16" text-length="10" />
-  <text id="elevation" x="120" y="55%" font-size="16" text-length="10" />
-  
-  <text id="resting" x="81" y="318" font-size="16" text-length="10" text-anchor="end" />
-  <text id="weight" x="255" y="318" font-size="16" text-length="10" text-anchor="start" />
-  
+  <image class="i lc" href="dist.png" y="48%-16" />
+  <image class="i lc" href="brn.png" y="55%-16" />
+  <image class="i lc" href="hr.png" y="69%-16" />
+  <image class="i lc" href="stps.png" y="62%-16" />
+  <image class="i rc" href="mins.png" y="48%-16" />
+  <image class="i rc" href="strs.png" y="55%-16" />
+  <text class="s" id="distance" x="35" y="48%" />
+  <text class="s" id="burn" x="35" y="55%" />
+  <text class="s" id="heart" x="35" y="69%" />
+  <text class="s" id="steps" x="35" y="62%" />
+  <text class="s" id="minutes" x="120" y="48%" />
+  <text class="s" id="elevation" x="120" y="55%" />
+  <text class="s" id="resting" x="81" y="318" text-anchor="end" />
+  <text class="s" id="weight" x="255" y="318" />
   <rect width="84" height="20" x="0" y="302" opacity="0.25" />
   <rect width="84" height="20" x="252" y="302" opacity="0.25" />
   <rect width="160" height="20" x="88" y="302" opacity="0.25" />
-  
   <rect width="156" height="14" x="90" y="305" />
   <rect width="154" height="12" x="91" y="306" fill="black" />
   <rect id="lvl" width="154" height="12" x="91" y="306" />
-  
-  <image id="vault-boy" class="v" href="boy.png" height="120" width="90" x="205" y="50%-60" />
-  <rect class="v" width="32" height="10" x="288" y="139" />
-  <rect class="v" width="32" height="10" x="288" y="190" />
-  <rect class="v" width="32" height="10" x="182" y="139" />
-  <rect class="v" width="32" height="10" x="182" y="190" />
-  <rect class="v" width="32" height="10" x="235" y="90" />
-  <rect class="v" width="32" height="10" x="235" y="237" />
-  
-  <!--<text id="latitude" x="35" y="85%" text-anchor="start" font-size="10" text-length="30"  />
-  <text id="longitude" x="301" y="85%" text-anchor="end" font-size="10" text-length="30"  />
-  <text id="heading" x="168" y="75%" text-anchor="middle" font-size="10" text-length="30"  />-->
-  
+  <image id="vault-boy" class="v" href="boy.png" />
+  <rect class="v rc b" y="139" />
+  <rect class="v rc b" y="190" />
+  <rect class="v lc b" y="139" />
+  <rect class="v lc b" y="190" />
+  <rect class="v mc b" y="90" />
+  <rect class="v mc b" y="237" />
   <text id="dweller" class="v" x="168" y="85%" >Vault 636</text>
 </svg>
