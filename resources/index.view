@@ -1,35 +1,35 @@
 <svg class="background" id="background">
-  <text id="system-info" x="168" y="10" >*** FIT-01 MICRO V1.2.0 ***</text>
-  <line x1="67" y1="16" x2="268" y2="16" />
-  <text id="console" x="50%" y="12%" text-length="336" text-anchor="middle" font-size="16" />
-  <text id="clock" x="12" y="25%" />
-  <text id="date" x="12" y="35%" text-length="30"/>
-  <image class="i lc" href="dist.png" y="48%-16" />
-  <image class="i lc" href="brn.png" y="55%-16" />
-  <image class="i lc" href="hr.png" y="69%-16" />
-  <image class="i lc" href="stps.png" y="62%-16" />
-  <image class="i rc" href="mins.png" y="48%-16" />
-  <image class="i rc" href="strs.png" y="55%-16" />
-  <text class="s" id="distance" x="35" y="48%" />
-  <text class="s" id="burn" x="35" y="55%" />
-  <text class="s" id="heart" x="35" y="69%" />
-  <text class="s" id="steps" x="35" y="62%" />
-  <text class="s" id="minutes" x="120" y="48%" />
-  <text class="s" id="elevation" x="120" y="55%" />
-  <text class="s" id="resting" x="81" y="318" text-anchor="end" />
-  <text class="s" id="weight" x="255" y="318" />
-  <rect width="84" height="20" x="0" y="302" opacity="0.25" />
-  <rect width="84" height="20" x="252" y="302" opacity="0.25" />
-  <rect width="160" height="20" x="88" y="302" opacity="0.25" />
-  <rect width="156" height="14" x="90" y="305" />
-  <rect width="154" height="12" x="91" y="306" fill="black" />
-  <rect id="lvl" width="154" height="12" x="91" y="306" />
-  <image id="vault-boy" class="v" href="boy.png" />
-  <rect class="v rc b" y="139" />
-  <rect class="v rc b" y="190" />
-  <rect class="v lc b" y="139" />
-  <rect class="v lc b" y="190" />
-  <rect class="v mc b" y="90" />
-  <rect class="v mc b" y="237" />
-  <text id="dweller" class="v" x="168" y="85%" >Vault 636</text>
+  <text id="system-info" x="168" y="10">*** FIT-01 MICRO TOMS.CLICK V1.2.0 ***</text>
+  <line x1="67" y1="16" x2="268" y2="16"/>
+  <text id="console" x="12" y="17%" text-length="336" text-anchor="start" font-size="16"/>
+  <text id="clock" x="12" y="32%"/>
+  <text id="date" x="12" y="42%" text-length="30"/>
+  <image class="i lc" href="i/dist.png" y="53%-16"/>
+  <image class="i lc" href="i/brn.png" y="60%-16"/>
+  <image class="i lc" href="i/hr.png" y="74%-16"/>
+  <image class="i lc" href="i/stps.png" y="67%-16"/>
+  <image class="i rc" href="i/mins.png" y="53%-16"/>
+  <image class="i rc" href="i/strs.png" y="60%-16"/>
+  <text class="s" id="distance" x="35" y="53%"/>
+  <text class="s" id="burn" x="35" y="60%"/>
+  <text class="s" id="heart" x="35" y="74%"/>
+  <text class="s" id="steps" x="35" y="67%"/>
+  <text class="s" id="minutes" x="120" y="53%"/>
+  <text class="s" id="elevation" x="120" y="60%"/>
+  <text class="s" id="resting" x="81" y="318" text-anchor="end"/>
+  <text class="s" id="weight" x="255" y="318"/>
+  <rect width="84" height="20" x="0" y="302" opacity="0.25"/>
+  <rect width="84" height="20" x="252" y="302" opacity="0.25"/>
+  <rect width="160" height="20" x="88" y="302" opacity="0.25"/>
+  <rect width="156" height="14" x="90" y="305"/>
+  <rect width="154" height="12" x="91" y="306" fill="black"/>
+  <rect id="lvl" width="154" height="12" x="91" y="306"/>
+  <image id="vault-boy" class="v" href="i/boy.png"/>
+  <rect class="v rc b" y="139"/>
+  <rect class="v rc b" y="190"/>
+  <rect class="v lc b" y="139"/>
+  <rect class="v lc b" y="190"/>
+  <rect class="v mc b" y="90"/>
+  <rect class="v mc b" y="237"/>
+  <text id="dweller" class="v" x="168" y="85%">Vault 636</text>
 </svg>
