@@ -1,18 +1,19 @@
 {
   "devDependencies": {
-    "@fitbit/sdk": "~5.0.0",
-    "@fitbit/sdk-cli": "^1.7.3"
+    "@fitbit/sdk": "~5.0.0"
   },
   "fitbit": {
     "appUUID": "2d38820d-91d8-47a7-947f-0d8a12fa1cbe",
     "appType": "clockface",
-    "appDisplayName": "Fitboy",
+    "appDisplayName": "Fit-Boy",
     "iconFile": "resources/icon.png",
     "wipeColor": "",
     "requestedPermissions": [
       "access_heart_rate",
       "access_activity",
-      "access_user_profile"
+      "access_user_profile",
+      "access_sleep",
+      "access_exercise"
     ],
     "buildTargets": [
       "vulcan",
@@ -20,7 +21,7 @@
     ],
     "i18n": {
       "en-US": {
-        "name": "Fitboy"
+        "name": "Fit-Boy"
       }
     },
     "defaultLanguage": "en-US"
