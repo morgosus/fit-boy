@@ -2,5 +2,6 @@
   <defs>
     <link rel="stylesheet" href="styles.css" />
     <link rel="import" href="/mnt/sysassets/system_widget.defs" />
+    <link rel="import" href="fitfont.gui" />
   </defs>
 </svg>
