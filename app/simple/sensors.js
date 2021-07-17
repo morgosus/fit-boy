@@ -8,11 +8,13 @@ import { display } from "display"; //turned off/on
 import * as Console from "./console";
 import * as stats from "./stats";
 
+import {FitFont} from "../fitfont";
+
 const sensors = new Array(0);
 const bodyPresence = new BodyPresenceSensor();
 const hrm = new HeartRateSensor({ frequency: 1 });
 
-const hrmData = document.getElementById("h");
+const hrmData = new FitFont({id:'h', font:'Monofonto_16'});
 const bars = document.getElementsByClassName("v");
 
 export function init() {

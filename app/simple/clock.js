@@ -4,6 +4,7 @@ import clock from "clock";
 
 import * as Console from "./console";
 import * as memory from "./memory";
+import {FitFont} from "../fitfont";
 
 clock.granularity = "seconds";
 
@@ -25,7 +26,8 @@ export function getHour() {
 
 let previousDay = 8;
 
-const clockLabel = document.getElementById("t");
+const clockLbl = new FitFont({id:'t', font:'Monofonto_45'});
+
 let cursorStop = false;
 
 export function importCursorSettings(newValue) {
@@ -40,7 +42,7 @@ export function init() {
     let mins = zeroPad(today.getMinutes());
     let secs = zeroPad(today.getSeconds());
   
-    clockLabel.text = `${hours}:${mins}`;
+    clockLbl.text = `${hours}:${mins}`;
   
     if(previousDay !== today.getDay())
       updateDate(today, previousDay);
@@ -50,12 +52,10 @@ export function init() {
   }
 }
 
-function updateClock() {
-  
-}
-
 function updateDate(today, previousDayNumber) {
   const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  
+  const dateLbl = new FitFont({id:'d', font:'Monofonto_16'});
 
   let dayNumber = today.getDay();
   let dayOfWeek = dayNames[dayNumber];
@@ -63,11 +63,9 @@ function updateDate(today, previousDayNumber) {
   let month = zeroPad(today.getMonth()+1);
   let year = today.getFullYear();
 
-  let date = `${dayOfWeek}   ${year}-${month}-${dayOfMonth}`;
-  
-  document.getElementById("d").text = date;
+  dateLbl.text = `${dayOfWeek} ${year}-${month}-${dayOfMonth}`;
     
   previousDay = dayNumber;
 
-  date, year, day, days, months, dayNumber = null;
+  dayNumber, dayOfWeek, dayOfMonth, month, year = null;
 }

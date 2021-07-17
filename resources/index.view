@@ -1,23 +1,126 @@
 <svg class="background" id="b">
   <text id="i" x="168" y="10">*** FIT-01 MICRO TOMS.CLICK V1.5.0 ***</text>
   <line x1="67" y1="16" x2="268" y2="16"/>
-  <text id="c" x="12" y="17%" text-length="336" text-anchor="start" font-size="16"/>
-  <text id="t" x="12" y="32%"/>
-  <text id="d" x="12" y="42%" text-length="30"/>
+  
+  <use href="#fitfont" id="c" x="12" y="17%">
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+  </use>
+  
+  <use href="#fitfont" id="t" x="12" y="32%">
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+  </use>
+  <use href="#fitfont" id="d" x="12" y="42%">
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+  </use>
+  
   <image class="i lc" href="i/dist.png" y="53%-16"/>
   <image class="i lc" href="i/brn.png" y="60%-16"/>
   <image class="i lc" href="i/hr.png" y="74%-16"/>
   <image class="i lc" href="i/stps.png" y="67%-16"/>
   <image class="i rc" href="i/mins.png" y="53%-16"/>
   <image class="i rc" href="i/strs.png" y="60%-16"/>
-  <text class="s" id="m" x="35" y="53%"/>
-  <text class="s" id="n" x="35" y="60%"/>
-  <text class="s" id="h" x="35" y="74%"/>
-  <text class="s" id="s" x="35" y="67%"/>
-  <text class="s" id="z" x="120" y="53%"/>
+  <use class="s" href="#fitfont" id="m" x="35" y="53%">
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+  </use>
+  <use class="s" href="#fitfont" id="n" x="35" y="60%">
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+  </use>
+  <use class="s" href="#fitfont" id="h" x="35" y="74%">
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+  </use>
+  <use class="s" href="#fitfont" id="s" x="35" y="67%">
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+  </use>
+  <use class="s" href="#fitfont" id="z" x="120" y="53%">
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+  </use>
+  <use class="s" href="#fitfont" id="e" x="120" y="60%">
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+  </use>
   <text class="s" id="e" x="120" y="60%"/>
-  <text class="s" id="r" x="81" y="318" text-anchor="end"/>
-  <text class="s" id="w" x="255" y="318"/>
+  <use class="s" href="#fitfont" id="r" x="81" y="318">
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+  </use>
+  <use class="s" href="#fitfont" id="w" x="255" y="318">
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+    <use href="#fitfont-char"/>
+  </use>
   <rect width="84" height="20" x="0" y="302" opacity="0.25"/>
   <rect width="84" height="20" x="252" y="302" opacity="0.25"/>
   <rect width="160" height="20" x="88" y="302" opacity="0.25"/>

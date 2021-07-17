@@ -2,9 +2,9 @@ import document from "document";
 
 import * as sensors from "./sensors";
 import * as clock from "./clock";
+import {FitFont} from "../fitfont";
 
-
-const c = document.getElementById("c");
+const c = new FitFont({id:'c', font:'Monofonto_16'});
 
 let i = 0;
 

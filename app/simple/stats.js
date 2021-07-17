@@ -7,14 +7,16 @@ import { user } from "user-profile"; //resting heart rate, gender, age, bmr, str
 import { battery } from "power";
 //also heartRateZone: Returns: "out-of-range" or "fat-burn" or "cardio" or "peak" or "below-custom" or "custom" or "above-custom"
 
-const steps = document.getElementById("s");
-const minutes = document.getElementById("z");
-const burn = document.getElementById("n");
-const distance = document.getElementById("m");
-const elevation = document.getElementById("e");
-const rhr = document.getElementById("r");
-const wt = document.getElementById("w");
-const lvl = document.getElementById("l");
+import {FitFont} from "../fitfont";
+
+const steps = new FitFont({id:'s', font:'Monofonto_16'});
+const minutes = new FitFont({id:'z', font:'Monofonto_16'});
+const burn = new FitFont({id:'n', font:'Monofonto_16'});
+const distance = new FitFont({id:'m', font:'Monofonto_16'});
+const elevation = new FitFont({id:'e', font:'Monofonto_16'});
+const rhr = new FitFont({id:'r', font:'Monofonto_16', halign: 'end'});
+const wt = new FitFont({id:'w', font:'Monofonto_16'});
+const lvl = document.getElementById('l');
 
 export function update() {
   steps.text = today.adjusted.steps;
@@ -23,8 +25,8 @@ export function update() {
   distance.text = (today.adjusted.distance/1000).toFixed(2);
   elevation.text = today.adjusted.elevationGain;
 
-  rhr.text = "HP " + user.restingHeartRate;
-  wt.text = user.weight + " KG";
+  rhr.text = "HP " + user.restingHeartRate;
+  wt.text = user.weight + " KG";
    
   lvl.width = battery.chargeLevel*1.54;
 }

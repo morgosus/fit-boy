@@ -46,13 +46,14 @@ A clock face for Fitbit Sense, modeled after the legendary Pip-Boy from the Fall
 - Displays "> USER NOT DETECTED" when not on wrist
   - Also hides the vault boy and name
 - Greets you
-- Has that flashing cursor terminals in Fallout have
+- Has that cool flashing cursor terminals in Fallout have
     
 ### WIP
 - [x] Customizable name
 - [x] More color schemes
 - [x] Even more color schemes
 - [x] Fix black screen on first run (no default color selected)
+- [x] Add monofonto font
 - [ ] AM/PM for the 12-hour clock format
 - [ ] Support Sunday as the first day
 - [ ] Use the limb health bars as goal bars
