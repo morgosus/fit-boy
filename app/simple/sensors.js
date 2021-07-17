@@ -12,7 +12,7 @@ const sensors = new Array(0);
 const bodyPresence = new BodyPresenceSensor();
 const hrm = new HeartRateSensor({ frequency: 1 });
 
-const hrmData = document.getElementById("heart");
+const hrmData = document.getElementById("h");
 const bars = document.getElementsByClassName("v");
 
 export function init() {

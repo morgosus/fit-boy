@@ -7,14 +7,14 @@ import { user } from "user-profile"; //resting heart rate, gender, age, bmr, str
 import { battery } from "power";
 //also heartRateZone: Returns: "out-of-range" or "fat-burn" or "cardio" or "peak" or "below-custom" or "custom" or "above-custom"
 
-const steps = document.getElementById("steps");
-const minutes = document.getElementById("minutes");
-const burn = document.getElementById("burn");
-const distance = document.getElementById("distance");
-const elevation = document.getElementById("elevation");
-const rhr = document.getElementById("resting");
-const wt = document.getElementById("weight");
-const lvl = document.getElementById("lvl");
+const steps = document.getElementById("s");
+const minutes = document.getElementById("z");
+const burn = document.getElementById("n");
+const distance = document.getElementById("m");
+const elevation = document.getElementById("e");
+const rhr = document.getElementById("r");
+const wt = document.getElementById("w");
+const lvl = document.getElementById("l");
 
 export function update() {
   steps.text = today.adjusted.steps;

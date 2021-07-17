@@ -17,8 +17,8 @@ import * as Console from "./simple/console";
 import * as stats from "./simple/stats";
 import * as sensors from "./simple/sensors";
 
-const clockLabel = document.getElementById("clock");
-const dateLabel = document.getElementById("date");
+const clockLabel = document.getElementById("t");
+const dateLabel = document.getElementById("d");
 
 
 /*--- Clock ---*/
@@ -76,8 +76,8 @@ clock.ontick = (evt) => { //Todo: add sensors to ticking? is that even needed?
 }
 
 /*--- Settings ---*/
-const background = document.getElementById("background");
-const dweller = document.getElementById("dweller");
+const background = document.getElementById("b");
+const dweller = document.getElementById("o");
 
 messaging.peerSocket.onmessage = evt => {
   if (evt.data.key === "color" && evt.data.newValue)

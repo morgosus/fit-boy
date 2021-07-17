@@ -2,7 +2,7 @@ import document from "document";
 
 import * as sensors from "./sensors";
 
-const c = document.getElementById("console");
+const c = document.getElementById("c");
 
 let i = 0;
 let hour = 12; 
