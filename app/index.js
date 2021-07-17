@@ -10,65 +10,22 @@ import * as util from "./simple/utils";
 
 import * as messaging from "messaging"; //settings
 
-import { display } from "display"; //turned off/on
-import { HeartRateSensor } from "heart-rate"; //bpm
-import { BodyPresenceSensor } from "body-presence"; //onWrist
-
-import { me as appbit } from "appbit"; //part of using today
-import { today } from "user-activity"; //steps, elevation, goals, ...
-import { user } from "user-profile"; //resting heart rate, gender, age, bmr, stride, weight, height, ...
-//also heartRateZone: Returns: "out-of-range" or "fat-burn" or "cardio" or "peak" or "below-custom" or "custom" or "above-custom"
-
 //Battery
-import { battery } from "power";
 import { memory } from "system";
 
-
-
-// Get a handle on the <text> element
-const background = document.getElementById("background");
+import * as Console from "./simple/console";
+import * as stats from "./simple/stats";
+import * as sensors from "./simple/sensors";
 
 const clockLabel = document.getElementById("clock");
 const dateLabel = document.getElementById("date");
 
-const vaultBoy = document.getElementById("vault-boy");
 
-const dweller = document.getElementById("dweller");
+/*--- Clock ---*/
 
-
-const bars = document.getElementsByClassName("v");
-
-const Console = document.getElementById("console");
 const cursorStop = false;
 
 let hours = 12;
-
-function print(text) {
-  if(text) {
-    Console.text = ` > ${text} ▮`;
-    return;
-  } 
-
-  if(hours >= 5 && hours < 12)
-    print("GOOD MORNING");
-  else if (hours >= 12 && hours < 17) //afternoon
-    print("GOOD AFTERNOON");
-  else if (hours >= 17 && hours < 19) //evening
-    print("GOOD EVENING");
-  else //night
-    print("GOOD NIGHT");
-}
-
-function tickConsole(second) {
-  //Keep text
-  let text = Console.text;
-
-  //Switch between a bar and a zero width space (U+200b)
-  if(second % 2 == 0)
-    Console.text =  text.replace("▮", "​");
-  else
-    Console.text = text.replace("​", "▮");
-}
 
 // Update the clock every minute
 clock.granularity = "seconds";
@@ -79,6 +36,9 @@ clock.ontick = (evt) => { //Todo: add sensors to ticking? is that even needed?
   let today = evt.date;
   
   hours =  util.zeroPad(today.getHours());
+  
+  Console.passHour(hours);
+  
   let mins = util.zeroPad(today.getMinutes());
   let secs = util.zeroPad(today.getSeconds());
   
@@ -110,14 +70,15 @@ clock.ontick = (evt) => { //Todo: add sensors to ticking? is that even needed?
   }
 
   if(!cursorStop)
-    tickConsole(secs);
+    Console.tick();
 
   console.log(`JS memory: ${memory.js.used} / ${memory.js.total}, peak: ${memory.js.peak}.`);
 }
 
 /*--- Settings ---*/
+const background = document.getElementById("background");
+const dweller = document.getElementById("dweller");
 
-// Message is received
 messaging.peerSocket.onmessage = evt => {
   if (evt.data.key === "color" && evt.data.newValue)
     background.style.fill = JSON.parse(evt.data.newValue);
@@ -128,126 +89,9 @@ messaging.peerSocket.onmessage = evt => {
 };
 
 /*--- Sensors ---*/
+sensors.init();
 
-const sensors = new Array(2);
-
-const hrmData = document.getElementById("heart");
-const hrm = new HeartRateSensor({ frequency: 1 });
-
-function hrmInit() {
-//TODO: bodyPresence.present
-
-hrm.addEventListener("reading", () => {
-  hrmData.text = hrm.heartRate ? hrm.heartRate : "--";
-});
-sensors.push(hrm);
-
-hrm.start();
-} hrmInit();
-
-/*--- Is the watch on a creature? ---*/
-
-const bodyPresence = new BodyPresenceSensor();
-
-bodyPresence.addEventListener("reading", () => {
-  let i;
-
-  if(bodyPresence.present) {   
-    for (i = 0; i < bars.length; i++) {
-      bars[i].style.opacity = 1;
-    }
-
-    if(battery.charging)
-      print("CHARGING");
-    else
-      print();
-    
-  } else { 
-    hrmData.text = "--";
-    
-    
-    for (i = 0; i < bars.length; i++) {
-      bars[i].style.opacity = 0;
-    }
-
-    if(battery.charging)
-      print("CHARGING");
-    else
-      print("USER NOT DETECTED");
-  }
-
-});
-
-sensors.push(bodyPresence);
-bodyPresence.start();
-
-//Todo: Condition this with onWrist
-  /*--- Today ---*/
- function updateStats() {
-  const steps = document.getElementById("steps");
-  const minutes = document.getElementById("minutes");
-  const burn = document.getElementById("burn");
-  const distance = document.getElementById("distance");
-  const elevation = document.getElementById("elevation");
-  const rhr = document.getElementById("resting");
-  const wt = document.getElementById("weight");
-   
-  const lvl = document.getElementById("lvl");
-  
-  steps.text = today.adjusted.steps;
-  minutes.text = today.adjusted.activeZoneMinutes.total;
-  burn.text = today.adjusted.calories;
-  distance.text = today.adjusted.distance + "m";
-  elevation.text = today.adjusted.elevationGain;
-
-  rhr.text = "HP " + user.restingHeartRate;
-  wt.text = user.weight + " KG";
-   
-  lvl.width = battery.chargeLevel*1.54;
-  
-   console.log("Stats updated.");
-} updateStats();
+/*--- Stats ---*/
+stats.update();
 
 
-function wakeWatch() {
-  turnSensorsOn();
-  updateStats();
-}
-
-function sleepWatch() {
-  turnSensorsOff()
-}
-
-function turnSensorsOn() {
-  if(bodyPresence.present)
-    sensors.map(sensor => sensor.start());
-  else
-    bodyPresence.start();
-}
-
-function turnSensorsOff() {
-  sensors.map(sensor => sensor.stop());
-}
-
-/*--- Display ---*/
-display.addEventListener("change", () => {
-  // Probably better to run these things once when the screen turns on than every second...
-  if(display.on) {
-    console.log("Display on.");
-    wakeWatch();
-  } else {
-    console.log("Display off.");
-    sleepWatch();
-  }
-});
-
-//TODO: DRY - CONSOLE
-battery.addEventListener("change", () => {
-  // Battery changes
-  if(battery.charging)
-      print("CHARGING");
-  else if(!bodyPresence.present)
-      print("USER NOT DETECTED");
-  else
-    print();
-});
