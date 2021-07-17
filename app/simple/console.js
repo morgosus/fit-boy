@@ -1,16 +1,12 @@
 import document from "document";
 
 import * as sensors from "./sensors";
+import * as clock from "./clock";
+
 
 const c = document.getElementById("c");
 
 let i = 0;
-let hour = 12; 
-
-export function passHour(Hour) {
-  //TODO: Get out of clock
-  hour = Hour;
-}
 
 function say(what) {
     c.text = ` > ${what} ▮`;
@@ -50,6 +46,8 @@ export function announce() {
 }
 
 function greet() {
+  const hour = clock.getHour();
+  
   if(hour >= 5 && hour < 12)
     say("GOOD MORNING");
   else if (hour >= 12 && hour < 17) //afternoon
