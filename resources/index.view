@@ -1,5 +1,5 @@
 <svg class="background" id="background">
-  <text id="system-info" x="168" y="10">*** FIT-01 MICRO TOMS.CLICK V1.2.0 ***</text>
+  <text id="system-info" x="168" y="10">*** FIT-01 MICRO TOMS.CLICK V1.5.0 ***</text>
   <line x1="67" y1="16" x2="268" y2="16"/>
   <text id="console" x="12" y="17%" text-length="336" text-anchor="start" font-size="16"/>
   <text id="clock" x="12" y="32%"/>
