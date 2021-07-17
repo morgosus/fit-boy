@@ -68,6 +68,6 @@ function updateDate(today, previousDayNumber) {
   document.getElementById("d").text = date;
     
   previousDay = dayNumber;
-    
-  let date, year, day, days, months, dayNumber, dayNames = null;
+
+  date, year, day, days, months, dayNumber = null;
 }
