@@ -13,7 +13,8 @@
       "access_activity",
       "access_user_profile",
       "access_sleep",
-      "access_exercise"
+      "access_exercise",
+      "access_location"
     ],
     "buildTargets": [
       "vulcan",

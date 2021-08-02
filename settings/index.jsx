@@ -6,6 +6,7 @@ function fitboySettings(props) {
         title={<Text bold>Theme</Text>}>
         
         <ColorSelect
+          label="Text Color"
           settingsKey="color"
           colors={[
             {color: "#16FF42"},
@@ -28,7 +29,14 @@ function fitboySettings(props) {
         
         <Toggle
           settingsKey="cursor"
-          label="Stop console flash animation"
+          label="Stop Console Flash Animation"
+          />
+        
+        <Slider
+          settingsKey="bgop"
+          min="0"
+          max="100"
+          label="Background Opacity"
           />
       </Section>
       <Section

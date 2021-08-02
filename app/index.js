@@ -11,6 +11,8 @@ import * as misc from "./simple/misc";
 messaging.peerSocket.onmessage = evt => {
   if (evt.data.key === "color" && evt.data.newValue)
     document.getElementById("b").style.fill = JSON.parse(evt.data.newValue);
+  else if (evt.data.key === "bgop" && evt.data.newValue)
+    document.getElementById("bg").style.opacity = JSON.parse(evt.data.newValue)/100;
   else if (evt.data.key === "name" && evt.data.newValue)
     document.getElementById("o").text = JSON.parse(evt.data.newValue).name;
   else if (evt.data.key === "cursor")
