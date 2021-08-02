@@ -1,6 +1,6 @@
 # Fit-Boy: Now available within the [Fitbit Gallery](https://gallery.fitbit.com/details/2d38820d-91d8-47a7-947f-0d8a12fa1cbe)!
 
-![Preview](github/1.2.0.png)
+![Preview](github/1.5.0.png)
 
 ## Description
 A clock face for Fitbit Sense, modeled after the legendary Pip-Boy from the Fallout Series by Fallout Series by Bethesda. Built using the Fitbit Studio and Fitbit OS Simulator.
@@ -54,9 +54,9 @@ A clock face for Fitbit Sense, modeled after the legendary Pip-Boy from the Fall
 - [x] Even more color schemes
 - [x] Fix black screen on first run (no default color selected)
 - [x] Add monofonto font
-- [ ] AM/PM for the 12-hour clock format
-- [ ] Support Sunday as the first day
-- [ ] Use the limb health bars as goal bars
+- [ ] Always On Display
+- [ ] 12-hour format
+- [ ] Potentially: Use the limb health bars as goal bars
   - [ ] Active Zone Minutes
   - [ ] Calories Burn
   - [ ] Elevation
@@ -65,8 +65,8 @@ A clock face for Fitbit Sense, modeled after the legendary Pip-Boy from the Fall
   - [ ] ? Use the bottom bar as total progress
 - [ ] Change picture based on the active zone and other factors
     - [ ] Make the vault boy animated
-- [ ] Time till sunrise / sunset
-- [ ] GPS
+- [ ] Potentially:  Time till sunrise / sunset
+- [ ] Potentially:  GPS
     - [ ] Latitude
     - [ ] Longitude
     - [ ] Heading
