@@ -14,11 +14,6 @@ Welcome... to Vault 663.
 - Fitbit Sense
 - Fitbit Versa 3
 
-## Requested Permissions:
-- heart rate access (live bpm)
-- activity (today's stats)
-- user profile (weight)
-
 ## Features
 - Vault Boy with limb health bars for the proper Pip-Boy feel
 - You may type in your name to signify that you own this Fit-Boy
