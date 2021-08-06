@@ -1,12 +1,14 @@
+import { gettext } from "i18n";
+
 function fitboySettings(props) {
   return (
     <Page>
-      <Text bold align="center">Fit-Boy</Text>
+      <Text bold align="center">{ gettext('appname') }</Text>
       <Section
-        title={<Text bold>Theme</Text>}>
+        title={<Text bold>{ gettext('thm') }</Text>}>
         
         <ColorSelect
-          label="Text Color"
+          label={ gettext('clr') }
           settingsKey="color"
           colors={[
             {color: "#16FF42"},
@@ -29,22 +31,22 @@ function fitboySettings(props) {
         
         <Toggle
           settingsKey="cursor"
-          label="Stop Console Flash Animation"
+          label={ gettext('concurstop') }
           />
         
         <Slider
           settingsKey="bgop"
           min="0"
           max="100"
-          label="Background Opacity"
+          label={ gettext('bgop') }
           />
       </Section>
       <Section
-        title={<Text bold>Dweller</Text>}>
+        title={<Text bold>{ gettext('dwlr') }</Text>}>
         
         <TextInput
           settingsKey="name"
-          label="Name"
+          label={ gettext('nm') }
           />
       </Section>
     </Page>
