@@ -5,13 +5,13 @@ import * as messaging from "messaging";
 import * as stats from "./simple/stats";
 import * as sensors from "./simple/sensors";
 import * as clock from "./simple/clock";
+import * as misc from "./simple/misc";
 
 import {FitFont} from "./fitfont";
 
+import { locale } from "user-settings";
 
-const dweller = new FitFont({id:'o', font:'Monofonto_16'});
-
-dweller.halign = 'middle';
+const dweller = new FitFont({ id:'o', font:'Monofonto_16', halign: 'middle' });
 
 /*--- Settings ---*/
 messaging.peerSocket.onmessage = evt => {
