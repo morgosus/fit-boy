@@ -31,6 +31,12 @@
       },
       "it-IT": {
         "name": "Fit-Boy"
+      },
+      "de-DE": {
+        "name": "Fit-Boy"
+      },
+      "ru-RU": {
+        "name": "Fit-Boy"
       }
     },
     "defaultLanguage": "en-US"
