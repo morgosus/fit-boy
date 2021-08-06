@@ -64,6 +64,7 @@ function batteryShow() {
   
   if(mod == 0 && charge != 0) {
     mod = 14;
+    rmd = 0;
   }
   
   if(charge <= 20) { /* Charge under 20 */
