@@ -1,0 +1,22 @@
+msgid "appname"
+msgstr "Fit-Boy"
+
+
+
+msgid "thm"
+msgstr "Téma"
+
+msgid "clr"
+msgstr "Barva"
+
+msgid "concurstop"
+msgstr "Vypnout blikání kurzoru konzole"
+
+msgid "bgop"
+msgstr "Viditelnost pozadí"
+
+msgid "dwlr"
+msgstr "Obyvatel"
+
+msgid "nm"
+msgstr "Jméno"

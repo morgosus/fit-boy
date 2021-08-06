@@ -1,0 +1,22 @@
+msgid "appname"
+msgstr "Fit-Boy"
+
+
+
+msgid "thm"
+msgstr "Theme"
+
+msgid "clr"
+msgstr "Color"
+
+msgid "concurstop"
+msgstr "Stop console cursor animation"
+
+msgid "bgop"
+msgstr "Background Opacity"
+
+msgid "dwlr"
+msgstr "Dweller"
+
+msgid "nm"
+msgstr "Name"

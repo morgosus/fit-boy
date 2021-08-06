@@ -1,0 +1,42 @@
+msgid "appname"
+msgstr "Fit-Boy"
+
+
+
+msgid "user_not_detected"
+msgstr "UZIVATEL NEDETEKOVAN"
+
+msgid "charging"
+msgstr "BATERIE SE NABIJI"
+
+msgid "morning"
+msgstr "DOBRE RANO"
+
+msgid "afternoon"
+msgstr "DOBRE ODPOLEDNE"
+
+msgid "evening"
+msgstr "DOBRY VECER"
+
+msgid "night"
+msgstr "DOBROU NOC"
+
+
+
+msgid "mo"
+msgstr "Po"
+
+msgid "tu"
+msgstr "Ut"
+
+msgid "we"
+msgstr "St"
+
+msgid "th"
+msgstr "Ct"
+
+msgid "fr"
+msgstr "Pa"
+
+msgid "sa"
+msgstr "So"

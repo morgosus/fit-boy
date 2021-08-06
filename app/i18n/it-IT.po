@@ -1,0 +1,45 @@
+msgid "appname"
+msgstr "Fit-Boy"
+
+
+
+msgid "user_not_detected"
+msgstr "L'UTENTE NON VIENE RILEVATO"
+
+msgid "charging"
+msgstr "LA BATTERIA SI STA CARICANDO"
+
+msgid "morning"
+msgstr "BUON GIORNO"
+
+msgid "afternoon"
+msgstr "BUON POMERIGGIO"
+
+msgid "evening"
+msgstr "BUON SERATA"
+
+msgid "night"
+msgstr "BUONA NOTTE"
+
+
+
+msgid "mo"
+msgstr "Lun"
+
+msgid "tu"
+msgstr "Mar"
+
+msgid "we"
+msgstr "Mer"
+
+msgid "th"
+msgstr "Gio"
+
+msgid "fr"
+msgstr "Ven"
+
+msgid "sa"
+msgstr "Sob"
+
+msgid "su"
+msgstr "Dom"

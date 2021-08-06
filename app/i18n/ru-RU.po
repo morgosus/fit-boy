@@ -1,0 +1,45 @@
+msgid "appname"
+msgstr "Fit-Boy"
+
+
+
+msgid "user_not_detected"
+msgstr "пользователь не обнаружен" 
+
+msgid "charging"
+msgstr "зарядка"
+
+msgid "morning"
+msgstr "доброе утро"
+
+msgid "afternoon"
+msgstr "добрый день"
+
+msgid "evening"
+msgstr "добрый вечер"
+ 
+msgid "night"
+msgstr "Доброй ночи"
+
+
+
+msgid "mo"
+msgstr "Пон"
+
+msgid "tu"
+msgstr "Втр"
+
+msgid "we"
+msgstr "Стр"
+
+msgid "th"
+msgstr "Чтв"
+
+msgid "fr"
+msgstr "Пят"
+
+msgid "sa"
+msgstr "Суб"
+
+msgid "su"
+msgstr "Вск"

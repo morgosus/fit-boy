@@ -1,0 +1,22 @@
+msgid "appname"
+msgstr "Fit-Boy"
+
+
+
+msgid "thm"
+msgstr "Tema"
+
+msgid "clr"
+msgstr "Color"
+
+msgid "concurstop"
+msgstr "Detener la animación flash de la consola"
+
+msgid "bgop"
+msgstr "Opacidad del dondo"
+
+msgid "dwlr"
+msgstr "Habitante"
+
+msgid "nm"
+msgstr "Nombre"

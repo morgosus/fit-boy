@@ -1,0 +1,22 @@
+msgid "appname"
+msgstr "Fit-Boy"
+
+
+
+msgid "thm"
+msgstr "Тема" 
+
+msgid "clr"
+msgstr "цвет" 
+
+msgid "concurstop"
+msgstr "Остановить анимацию курсора"  
+
+msgid "bgop"
+msgstr "Прозрачность фона" 
+
+msgid "dwlr"
+msgstr "житель" 
+
+msgid "nm"
+msgstr "имя" 

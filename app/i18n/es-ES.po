@@ -1,0 +1,45 @@
+msgid "appname"
+msgstr "Fit-Boy"
+
+
+
+msgid "user_not_detected"
+msgstr "USUARIO NO DETECTADO"
+
+msgid "charging"
+msgstr "CARGANDO"
+
+msgid "morning"
+msgstr "BUENOS DIAS"
+
+msgid "afternoon"
+msgstr "BUENAS TARDES"
+
+msgid "evening"
+msgstr "BUENAS NOCHES"
+
+msgid "night"
+msgstr "BUENAS NOCHES"
+
+
+
+msgid "mo"
+msgstr "Lun"
+
+msgid "tu"
+msgstr "Mar"
+
+msgid "we"
+msgstr "Mar"
+
+msgid "th"
+msgstr "Mie"
+
+msgid "fr"
+msgstr "Jue"
+
+msgid "sa"
+msgstr "Vie"
+
+msgid "su"
+msgstr "Sab"
