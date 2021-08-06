@@ -1,10 +1,15 @@
 import document from "document";
 
+import { gettext } from "i18n";
+
 import clock from "clock";
 
 import * as Console from "./console";
-import * as memory from "./memory";
 import {FitFont} from "../fitfont";
+
+import { preferences } from "user-settings";
+
+import { locale } from "user-settings";
 
 clock.granularity = "seconds";
 
@@ -27,6 +32,7 @@ export function getHour() {
 let previousDay = 8;
 
 const clockLbl = new FitFont({id:'t', font:'Monofonto_45'});
+const timeIndicator = new FitFont({id:'ti', font:'Monofonto_16'});
 
 let cursorStop = false;
 
@@ -34,16 +40,32 @@ export function importCursorSettings(newValue) {
   cursorStop = newValue;
 }
 
+
 export function init() {
   clock.ontick = (evt) => {
     let today = evt.date;
     hour = today.getHours();
-    let hours =  zeroPad(hour);
-    let mins = zeroPad(today.getMinutes());
+    
+    let hours;
+    let mins;
+    
+    if(preferences.clockDisplay === "12h") {
+      hours = hour % 12 || 12;
+      hours = zeroPad(hours);
+      mins = zeroPad(today.getMinutes());
+      timeIndicator.text = ( hour >= 12 ) ? 'PM' : 'AM';
+      timeIndicator.style.display = "inline";
+    } else {
+      hours = zeroPad(hour);
+      mins = zeroPad(today.getMinutes());
+      timeIndicator.style.display = "none";
+    }
+    
     let secs = zeroPad(today.getSeconds());
   
     clockLbl.text = `${hours}:${mins}`;
-  
+    
+    
     if(previousDay !== today.getDay())
       updateDate(today, previousDay);
     
@@ -53,9 +75,12 @@ export function init() {
 }
 
 function updateDate(today, previousDayNumber) {
-  const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const dayNames = [gettext("su"), gettext("mo"), gettext("tu"), gettext("we"), gettext("th"), gettext("fr"), gettext("sa")];
   
-  const dateLbl = new FitFont({id:'d', font:'Monofonto_16'});
+  if(locale.language === 'ru-ru')
+    const dateLbl = new FitFont({id:'d', font:'Oswald_16'});
+  else
+    const dateLbl = new FitFont({id:'d', font:'Monofonto_16'});
 
   let dayNumber = today.getDay();
   let dayOfWeek = dayNames[dayNumber];

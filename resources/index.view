@@ -1,139 +1,163 @@
-<svg class="background" id="b">
-  <image id="bg" href="bg.png" />
-  <text id="i" x="168" y="25">*** FIT-01 MICRO TOMS.CLICK V2.0.0 ***</text>
-  <line x1="67" y1="30" x2="268" y2="30"/>
+<svg class="background" fill="#16FF42" viewport-fill="black" font-family="System-Bold" id="b">
+  <!-- Background Image -->
+  <image id="bg" href="bg.png" opacity="0.7"/>
   
-  <use href="#fitfont" id="c" x="12" y="17%">
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
+  <g class="v-" pointer-events="visible" transform="translate(50%,177)">
+    <animateTransform attributeType="rotate" from="0" to="360" begin="load" dur="13" repeatCount="indefinite"/>
+    <image id="cog" href="cog.png" x="$-50" y="$-50" width="100" height="100" opacity="1"/>
+  </g>
+  <!-- Header -->
+  <text id="i" x="168" y="25" opacity="1" width="100%" height="100%">*** FIT-01 MICRO TOMS.CLICK V3.0.0 ***</text>
+  
+  <!-- Console -->
+  <use href="#fitfont" id="c" x="15" y="17%">
+    <use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/>
+    <use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/>
+    <use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/>
+    <use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/>
+    <use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/>
+    <use href="#fitfont-char"/><use href="#fitfont-char"/>
   </use>
   
-  <use href="#fitfont" id="t" x="12" y="32%">
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-  </use>
-  <use href="#fitfont" id="d" x="12" y="42%">
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-  </use>
   
-  <image class="i lc" href="i/dist.png" y="53%-16"/>
-  <image class="i lc" href="i/brn.png" y="60%-16"/>
-  <image class="i lc" href="i/hr.png" y="74%-16"/>
-  <image class="i lc" href="i/stps.png" y="67%-16"/>
-  <image class="i rc" href="i/mins.png" y="53%-16"/>
-  <image class="i rc" href="i/strs.png" y="60%-16"/>
-  <use class="s" href="#fitfont" id="m" x="35" y="53%">
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
+  
+  <svg id="away" class="v-">
+  <!-- 663 -->
+  <g transform="translate(50%-13, 177+5-11)">
+    <image href="Monofonto_16/54.png" width="8" height="12" x="0" y="0"/>
+    <image href="Monofonto_16/54.png" width="8" height="12" x="9" y="0"/>
+    <image href="Monofonto_16/51.png" width="8" height="12" x="18" y="0"/>
+  </g>
+    
+  </svg>
+  
+  
+  
+  <svg id="present" class="v">
+    
+     <!-- Stats -->
+  <g transform="translate(12, 186)">
+  
+    <!-- Icons -->
+    <image class="i rc" href="i/dist.png" y="0"/>
+    <image class="i rc" href="i/brn.png" y="45"/>
+    <image class="i lc" href="i/hr.png" y="45"/>
+    <image class="i lc" href="i/stps.png" y="23"/>
+    <image class="i lc" href="i/mins.png" y="0"/>
+    <image class="i rc" href="i/strs.png" y="23"/>
+  
+    <!-- Distance -->
+    <use class="s" href="#fitfont" id="m" x="101" y="16">
+      <use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/>
+      <use href="#fitfont-char"/>
+    </use>
+    <!-- Burn -->
+    <use class="s" href="#fitfont" id="n" x="101" y="62">
+      <use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/>
+    </use>
+    <!-- Heart Rate -->
+    <use class="s v" href="#fitfont" id="h" x="23" y="62">
+      <use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/>
+    </use>
+    <!-- Steps -->
+    <use class="s" href="#fitfont" id="s" x="23" y="40">
+      <use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/>
+    </use>
+    <!-- Active Zone Minutes -->
+    <use class="s" href="#fitfont" id="z" x="23" y="16">
+      <use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/>
+    </use>
+    <!-- Elevation -->
+    <use class="s" href="#fitfont" id="e" x="101" y="40">
+      <use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/>
+    </use>
+  </g>
+    
+  </svg>
+  
+  <!-- Clock -->
+  <g transform="translate(15,136)">
+  <!-- Time -->
+    <use href="#fitfont" id="t" x="0" y="0" font-size="45">
+      <use id="t1" href="#fitfont-char"/><use id="t2" href="#fitfont-char"/><use id="t3" href="#fitfont-char"/><use id="t4" href="#fitfont-char"/><use id="t5" href="#fitfont-char"/>
+    </use>
+    
+    <!-- Time indicator AM / PM -->
+    <use href="#fitfont" id="ti" x="123" y="-22">
+      <use href="#fitfont-char"/><use href="#fitfont-char"/>
+    </use>
+  
+    <!-- Day and Date -->
+    <use href="#fitfont" id="d" x="0" y="26">
+      <use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/>
+      <use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/>
+      <use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/>
+    </use>
+  </g>
+  
+ 
+  
+  
+  
+  
+  <!-- Footer -->
+  <g transform="translate(0,292)">
+    <rect width="84" height="20" x="0" y="0" opacity="0.25"/>
+    <rect width="84" height="20" x="252" y="0" opacity="0.25"/>
+    <rect width="160" height="20" x="88" y="0" opacity="0.25"/>
+    
+    <!-- Resting Heart Rate -->
+    <use class="s v" href="#fitfont" id="r" x="81" y="16">
+      <use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/>
+    </use>
+    
+    <!-- Weight -->
+    <use class="s v" href="#fitfont" id="w" x="255" y="16">
+      <use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/>
+      <use href="#fitfont-char"/><use href="#fitfont-char"/>
+    </use>
+    
+    <!-- Level -->
+    <rect width="156" height="14" x="90" y="3"/>
+    <rect width="154" height="12" x="91" y="4" fill="black"/>
+    <rect id="l" width="154" height="12" x="91" y="4"/>
+  </g>
+  
+  <!-- Vault Boy -->
+  <g transform="translate(201,103)">
+    <image id="v" href="i/boy.png"/>
+  
+    <!-- Health Bars -->
+    <rect class="v rc bar sr"/>
+    <rect class="v rc bar tr"/>
+    <rect class="v lc bar sr"/>
+    <rect class="v lc bar tr"/>
+    <rect class="v mc bar fr"/>
+    <rect class="v mc bar br"/>
+  </g>
+  <!-- Battery -->
+  
+  
+  <rect width="248" height="20" x="0" y="41" opacity="0.25"/>
+  
+  <rect width="84" height="20" x="252" y="41" opacity="0.25"/>
+  
+  <g transform="translate(255, 43)">
+    <rect width="36" height="16" x="0" y="0"/>
+  
+    <rect width="34" height="14" x="1" y="1" fill="black"/>
+    <rect id="b1" class="battery" x="1" y="1"/>
+    <rect id="b2" class="battery" x="8" y="1"/>
+    <rect id="b3" class="battery" x="15" y="1"/>
+    <rect id="b4" class="battery" x="22" y="1"/>
+    <rect id="b5" class="battery" x="29" y="1"/>
+  </g>
+    
+  <!-- Dweller Name -->
+  <use id="o" class="v" href="#fitfont" x="168" y="287">
+    <use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/>
+    <use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/>
+    <use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/>
+    <use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/><use href="#fitfont-char"/>
   </use>
-  <use class="s" href="#fitfont" id="n" x="35" y="60%">
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-  </use>
-  <use class="s" href="#fitfont" id="h" x="35" y="74%">
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-  </use>
-  <use class="s" href="#fitfont" id="s" x="35" y="67%">
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-  </use>
-  <use class="s" href="#fitfont" id="z" x="120" y="53%">
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-  </use>
-  <use class="s" href="#fitfont" id="e" x="120" y="60%">
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-  </use>
-  <text class="s" id="e" x="120" y="60%"/>
-  <use class="s" href="#fitfont" id="r" x="81" y="308">
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-  </use>
-  <use class="s" href="#fitfont" id="w" x="255" y="308">
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-    <use href="#fitfont-char"/>
-  </use>
-  <rect width="84" height="20" x="0" y="292" opacity="0.25"/>
-  <rect width="84" height="20" x="252" y="292" opacity="0.25"/>
-  <rect width="160" height="20" x="88" y="292" opacity="0.25"/>
-  <rect width="156" height="14" x="90" y="295"/>
-  <rect width="154" height="12" x="91" y="296" fill="black"/>
-  <rect id="l" width="154" height="12" x="91" y="296"/>
-  <image id="v" class="v" href="i/boy.png"/>
-  <rect class="v rc b" y="139"/>
-  <rect class="v rc b" y="190"/>
-  <rect class="v lc b" y="139"/>
-  <rect class="v lc b" y="190"/>
-  <rect class="v mc b" y="90"/>
-  <rect class="v mc b" y="237"/>
-  <text id="o" class="v" x="168" y="280">Vault 636</text>
 </svg>
