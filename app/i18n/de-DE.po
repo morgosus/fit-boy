@@ -1,0 +1,45 @@
+msgid "appname"
+msgstr "Fit-Boy"
+
+
+
+msgid "user_not_detected"
+msgstr "BENUTZER NICHT ERKANNT"
+
+msgid "charging"
+msgstr "DER AKKU WIRD GELADEN"
+
+msgid "morning"
+msgstr "GUTEN MORGEN"
+
+msgid "afternoon"
+msgstr "GUTEN NACHMITTAG"
+
+msgid "evening"
+msgstr "GUTEN ABEND"
+
+msgid "night"
+msgstr "GUTE NACHT"
+
+
+
+msgid "mo"
+msgstr "MO"
+
+msgid "tu"
+msgstr "DI"
+
+msgid "we"
+msgstr "MI"
+
+msgid "th"
+msgstr "DO"
+
+msgid "fr"
+msgstr "FR"
+
+msgid "sa" 
+msgstr "SA"
+
+msgid "su"
+msgstr "SO"

@@ -1,0 +1,22 @@
+msgid "appname"
+msgstr "Fit-Boy"
+
+
+
+msgid "thm"
+msgstr "Themen"
+
+msgid "clr"
+msgstr "Farbe"
+
+msgid "concurstop"
+msgstr "Das Blinken des Konsolencursors ausschalten"
+
+msgid "bgop"
+msgstr "Hintergrund Sichtbarkeit"
+
+msgid "dwlr"
+msgstr "Bewohner"
+
+msgid "nm"
+msgstr "Namen"
