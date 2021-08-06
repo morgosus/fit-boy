@@ -12,7 +12,6 @@
       "access_heart_rate",
       "access_activity",
       "access_user_profile",
-      "access_sleep",
       "access_exercise",
       "access_location"
     ],
@@ -22,6 +21,15 @@
     ],
     "i18n": {
       "en-US": {
+        "name": "Fit-Boy"
+      },
+      "cs-CZ": {
+        "name": "Fit-Boy"
+      },
+      "es-ES": {
+        "name": "Fit-Boy"
+      },
+      "it-IT": {
         "name": "Fit-Boy"
       }
     },
