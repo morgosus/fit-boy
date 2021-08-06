@@ -1,10 +1,14 @@
 # Fit-Boy: Now available within the [Fitbit Gallery](https://gallery.fitbit.com/details/2d38820d-91d8-47a7-947f-0d8a12fa1cbe)!
 
-![Preview](github/2.0.0.png)
-![Preview](github/2.0.0-NW.png)
+![Preview](github/3.0.0.png)
+![Preview](github/3.0.0-charging.png)
+![Preview](github/3.0.0-spanish.png)
+![Preview](github/3.0.0-presence-not-detected.png)
 
 ## Description
 A clock face for Fitbit Sense, modeled after the legendary Pip-Boy from the Fallout Series by Fallout Series by Bethesda. Built using the Fitbit Studio and Fitbit OS Simulator.
+
+Welcome... to Vault 663.
 
 ## Target Devices:
 - Fitbit Sense
@@ -20,7 +24,7 @@ A clock face for Fitbit Sense, modeled after the legendary Pip-Boy from the Fall
 - You may type in your name to signify that you own this Fit-Boy
 
 ### Clock
-- Supports only 24-hour format
+- Supports both 12-hour and 24-hour format
 
 ### Date and Day Format
 - DDD YYYY-MM-DD
@@ -55,19 +59,21 @@ A clock face for Fitbit Sense, modeled after the legendary Pip-Boy from the Fall
 - [x] Even more color schemes
 - [x] Fix black screen on first run (no default color selected)
 - [x] Add monofonto font
-- [ ] Always On Display
-- [ ] 12-hour format
-- [ ] Potentially: Use the limb health bars as goal bars
-  - [ ] Active Zone Minutes
-  - [ ] Calories Burn
-  - [ ] Elevation
-  - [ ] Distance
-  - [ ] Steps
-  - [ ] ? Use the bottom bar as total progress
+- [x] 12-hour format
+- [x] 24-hour format
+- [x] Translations
+- [ ] ~~Potentially: Use the limb health bars as goal bars~~ Rejected: Battery Saving
+  - [ ] ~~Active Zone Minutes~~
+  - [ ] ~~Calories Burn~~
+  - [ ] ~~Elevation~~
+  - [ ] ~~Distance~~
+  - [ ] ~~Steps~~
+- [x] Use the bottom bar as total progress
+- [ ] ~~Potentially:  GPS~~ Rejected: Battery Saving
+    - [ ] ~~Latitude~~
+    - [ ] ~~Longitude~~
+    - [ ] ~~Heading~~
 - [ ] Change picture based on the active zone and other factors
     - [ ] Make the vault boy animated
 - [ ] Potentially:  Time till sunrise / sunset
-- [ ] Potentially:  GPS
-    - [ ] Latitude
-    - [ ] Longitude
-    - [ ] Heading
+- [ ] (Fitbit Permission Required) Always On Display
