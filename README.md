@@ -10,7 +10,7 @@ A clock face for Fitbit Sense, modeled after the legendary Pip-Boy from the Fall
 
 Welcome... to Vault 663.
 
-## Target Devices:
+## Target Devices
 - Fitbit Sense
 - Fitbit Versa 3
 
