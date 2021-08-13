@@ -4,42 +4,42 @@ msgstr "Fit-Boy"
 
 
 msgid "user_not_detected"
-msgstr "USER NOT DETECTED"
+msgstr "USUÁRIO NÃO DETECTADO"
 
 msgid "charging"
-msgstr "CHARGING"
+msgstr "CARREGANDO"
 
 msgid "morning"
-msgstr "GOOD MORNING"
+msgstr "BOM DIA"
 
 msgid "afternoon"
-msgstr "GOOD AFTERNOON"
+msgstr "BOA TARDE"
 
 msgid "evening"
-msgstr "GOOD EVENING"
+msgstr "BOA NOITE"
 
 msgid "night"
-msgstr "GOOD NIGHT"
+msgstr "BOA NOITE"
 
 
 
 msgid "mo"
-msgstr "Mon"
+msgstr "Seg"
 
 msgid "tu"
-msgstr "Tue"
+msgstr "Ter"
 
 msgid "we"
-msgstr "Wed"
+msgstr "Qua"
 
 msgid "th"
-msgstr "Thu"
+msgstr "Qui"
 
 msgid "fr"
-msgstr "Fri"
+msgstr "Sex"
 
 msgid "sa"
-msgstr "Sat"
+msgstr "Sáb"
 
 msgid "su"
-msgstr "Sun"
+msgstr "Dom"
