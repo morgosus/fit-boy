@@ -44,8 +44,15 @@ export function update() {
   elevation.text = today.adjusted.elevationGain;
 
   rhr.text = `HP ${user.restingHeartRate}`;
-  wt.text = `${user.weight} KG`;  
-  
+
+  if(units.bodyWeight === "metric") { // "metric" kilograms
+    wt.text = `${user.weight} KG`;
+  } else if(units.bodyWeight === "us") { // "us" pounds
+    wt.text = `${user.weight*2.205} LBS`;
+  } else { //"stone" stones
+    wt.text = `${user.weight/6.35} ST`;
+  }
+
   batteryShow();
   
   levelShow();
