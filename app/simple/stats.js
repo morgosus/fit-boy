@@ -4,6 +4,7 @@ import { me as appbit } from "appbit"; //part of using today
 import { today } from "user-activity"; //steps, elevation, goals, ...
 import { user } from "user-profile"; //resting heart rate, gender, age, bmr, stride, weight, height, ...
 import { goals } from "user-activity";
+import { units } from "user-settings";
 
 import { primaryGoal } from "user-activity";
 
@@ -28,10 +29,18 @@ const b4 = document.getElementById("b4");
 const b5 = document.getElementById("b5");
 
 export function update() {
+
+
   steps.text = today.adjusted.steps;
   minutes.text = today.adjusted.activeZoneMinutes.total;
   burn.text = today.adjusted.calories;
-  distance.text = (today.adjusted.distance/1000).toFixed(2);
+
+  if(units.distance === "metric") { // "metric" kilometers
+    distance.text = (today.adjusted.distance/1000).toFixed(2) + " km";
+  } else { // "us" miles
+    distance.text = (today.adjusted.distance/1609).toFixed(2) + " km";
+  }
+
   elevation.text = today.adjusted.elevationGain;
 
   rhr.text = `HP ${user.restingHeartRate}`;
@@ -45,7 +54,7 @@ export function update() {
 function levelShow() {
   let goalProgress;
   
-  if(primaryGoal == "activeZoneMinutes") {
+  if(primaryGoal === "activeZoneMinutes") {
     goalProgress = today.adjusted["activeZoneMinutes"].total / goals["activeZoneMinutes"].total;
   } else {
     goalProgress = today.adjusted[primaryGoal] / goals[primaryGoal];
