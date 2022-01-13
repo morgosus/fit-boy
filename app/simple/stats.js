@@ -36,9 +36,9 @@ export function update() {
   burn.text = today.adjusted.calories;
 
   if(units.distance === "metric") { // "metric" kilometers
-    distance.text = (today.adjusted.distance/1000).toFixed(2) + "KM";
+    distance.text = (today.adjusted.distance/1000).toFixed(2);
   } else { // "us" miles
-    distance.text = (today.adjusted.distance/1609).toFixed(2) + "MI";
+    distance.text = (today.adjusted.distance/1609).toFixed(2);
   }
 
   elevation.text = today.adjusted.elevationGain;
