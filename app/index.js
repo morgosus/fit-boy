@@ -22,6 +22,27 @@ messaging.peerSocket.onmessage = evt => {
   else if (evt.data.key === "name" && evt.data.newValue) {
     dweller.text = JSON.parse(evt.data.newValue).name;
   }
+  else if (evt.data.key === "gender") {
+    console.log("Presence: " + sensors.presenceStatus());
+
+    if(JSON.parse(evt.data.newValue) === true) {
+      sensors.setGender("girl");
+
+      if(sensors.presenceStatus()) {
+        document.getElementById("v").href = "i/girl.png"
+      } else {
+        document.getElementById("v").href = "i/girl-absent.png"
+      }
+    } else {
+      sensors.setGender("boy");
+
+      if(sensors.presenceStatus()) {
+        document.getElementById("v").href = "i/boy.png"
+      } else {
+        document.getElementById("v").href = "i/boy-absent.png"
+      }
+    }
+  }
   else if (evt.data.key === "cursor")
     clock.importCursorSettings(JSON.parse(evt.data.newValue));
 };

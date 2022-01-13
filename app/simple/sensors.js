@@ -19,6 +19,8 @@ const bars = document.getElementsByClassName("v");
 const barsNeg = document.getElementsByClassName("v-");
 const boy = document.getElementById("v");
 
+let gender = "boy";
+
 const t1 = document.getElementById("t1");
 const t2 = document.getElementById("t2");
 const t3 = document.getElementById("t3");
@@ -47,12 +49,12 @@ function hideBars(present) {
   let j = barsNeg.length;
   
   if(present) {
-    boy.href = "i/boy.png";
-    
+    boy.href = "i/"+gender+".png";
+
     do {
       bars[i-1].style.opacity = 1;
     } while (--i);
-    boy.href = "i/boy.png";
+    boy.href = "i/"+gender+".png";
     
     do {
       barsNeg[j-1].style.opacity = 0;
@@ -74,7 +76,7 @@ function hideBars(present) {
     
     return;
   }
-  boy.href="i/absent.png";
+  boy.href="i/"+gender+"-absent.png";
   
   do {
     bars[i-1].style.opacity = 0;
@@ -119,6 +121,10 @@ export function chargingStatus() {
 
 export function presenceStatus() {
   return bodyPresence.present;
+}
+
+export function setGender(newValue) {
+  gender = newValue;
 }
 
 function on() {

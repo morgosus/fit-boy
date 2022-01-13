@@ -48,6 +48,11 @@ function fitboySettings(props) {
           settingsKey="name"
           label={ gettext('nm') }
           />
+
+        <Toggle
+            settingsKey="gender"
+            label="Vault-Girl"
+        />
       </Section>
     </Page>
   );
