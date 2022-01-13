@@ -1,4 +1,4 @@
-# Fit-Boy: Now available within the [Fitbit Gallery](https://gallery.fitbit.com/details/2d38820d-91d8-47a7-947f-0d8a12fa1cbe)!
+# Fit-Boy: Now available in the Best of 2021 section of [Fitbit Gallery](https://gallery.fitbit.com/details/2d38820d-91d8-47a7-947f-0d8a12fa1cbe)!
 
 ![Preview](github/3.0.0.png)
 ![Preview](github/3.0.0-charging.png)
