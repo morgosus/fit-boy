@@ -46,11 +46,11 @@ export function update() {
   rhr.text = `HP ${user.restingHeartRate}`;
 
   if(units.bodyWeight === "metric") { // "metric" kilograms
-    wt.text = `${(user.weight).toFixed(2)} KG`;
+    wt.text = `${(user.weight).toFixed(1)} KG`;
   } else if(units.bodyWeight === "us") { // "us" pounds
-    wt.text = `${(user.weight*2.205).toFixed(2)} LBS`;
+    wt.text = `${(user.weight*2.205).toFixed(1)} LBS`;
   } else { //"stone" stones
-    wt.text = `${(user.weight/6.35).toFixed(2)} ST`;
+    wt.text = `${(user.weight/6.35).toFixed(1)} ST`;
   }
 
   batteryShow();
