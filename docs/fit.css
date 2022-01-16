@@ -1,0 +1,158 @@
+@font-face {
+  font-family: "monofonto";
+  src: url("/assets/font/monofonto-webfont.woff2") format("woff2"), url("/assets/font/monofonto-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "monofonto", monospace;
+  margin: auto;
+  hyphens: auto;
+  background-color: black;
+  overflow-x: hidden;
+  color: #16FF42;
+}
+
+.header {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  cursor: default;
+}
+.header .introducing {
+  background-color: #447AB9;
+  color: #FEF265;
+  text-align: right;
+  font-size: 32.360679775px;
+  padding: 16.1803398875px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-right: 75px;
+  padding-top: 120px;
+  margin-top: -75px;
+  margin-right: -60px;
+  margin-left: -60px;
+  transform: rotate(15deg);
+}
+.header .title {
+  padding-left: 16.1803398875px;
+  margin-left: 16.1803398875px;
+  border-left: #16FF42 solid 16.1803398875px;
+  font-size: 32.360679775px;
+  font-weight: normal;
+  color: #16FF42;
+}
+.header p {
+  color: #16FF42;
+  background-color: rgba(22, 255, 66, 0.25);
+  padding: 16.1803398875px;
+  padding-top: 200px;
+  margin: 0;
+  margin-top: -200px;
+  text-align: center;
+}
+
+p {
+  font-size: 16.1803398875px;
+  text-align: justify;
+  line-height: 24.2705098313px;
+  max-width: 480px;
+  margin: auto;
+  margin-bottom: 32.360679775px;
+  margin-top: 32.360679775px;
+}
+
+main, header {
+  max-width: 480px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.red-menace {
+  font-weight: bold;
+  color: red;
+}
+
+.vault-tec {
+  color: #FEF265;
+}
+
+h2 {
+  padding: 16.1803398875px;
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 32.360679775px;
+  margin-top: 32.360679775px;
+  font-size: 20.2254248594px;
+}
+
+.green {
+  color: #1AFF80;
+}
+.green--title {
+  color: #1AFF80;
+  background-color: rgba(26, 255, 128, 0.25);
+  transform: rotate(3deg);
+  padding-right: 1016.1803398875px;
+  padding-left: 1016.1803398875px;
+  margin-left: -1000px;
+  margin-right: -1000px;
+}
+
+.orange {
+  color: #FFB641;
+}
+
+.vault {
+  color: #FEF265;
+}
+.vault--title {
+  background-color: #447AB9;
+}
+
+.vegas {
+  color: #FFB641;
+  background-color: rgba(255, 182, 65, 0.25);
+}
+
+.angel {
+  float: left;
+  width: 150px;
+  margin-right: 16.1803398875px;
+  margin-bottom: 16.1803398875px;
+}
+
+.roman {
+  float: left;
+}
+
+.fine-print {
+  font-size: 8.0901699438px;
+  line-height: 8.0901699438px;
+  margin-bottom: 4.0450849719px;
+  margin-top: 4.0450849719px;
+}
+
+.vault-tec-sign-out {
+  color: #447AB9;
+  text-align: center;
+}
+
+.watch {
+  width: 100%;
+}
+
+.download {
+  color: #447AB9;
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 24.2705098313px;
+}
+
+/*# sourceMappingURL=fit.css.map */

@@ -1,0 +1,139 @@
+$gr: 1.61803398875px
+
+$s: 10*$gr
+
+$font-name: "monofonto"
+$font-path: "/assets/font/monofonto-webfont"
+
+@font-face
+  font-family: $font-name
+  src: url($font-path + '.woff2') format('woff2'), url($font-path + '.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+
+$primary-font: $font-name, monospace
+
+*
+  box-sizing: border-box
+
+body
+  font-family: $primary-font
+  //width: 480px
+  margin: auto
+  hyphens: auto
+  background-color: black
+  overflow-x: hidden
+  color: #16FF42
+
+.header
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  background-color: black
+  cursor: default
+  //background-color: rgba(22, 255, 66, 0.25)
+  .introducing
+    background-color: #447AB9
+    color: #FEF265
+    text-align: right
+    font-size: $s*2
+    padding: $s
+    padding-left: 60px
+    padding-right: 60px
+    padding-right: 75px
+    padding-top: 120px
+    margin-top: -75px
+    margin-right: -60px
+    margin-left: -60px
+    transform: rotate(15deg)
+  .title
+    padding-left: $s
+    margin-left: $s
+    border-left: #16FF42 solid $s
+    font-size: $s*2
+    font-weight: normal
+    color: #16FF42
+  p
+    color: #16FF42
+    background-color: rgba(22, 255, 66, 0.25)
+    padding: $s
+    padding-top: 200px
+    margin: 0
+    margin-top: -200px
+    text-align: center
+p
+  font-size: $s
+  text-align: justify
+  line-height: $s*1.5
+  max-width: 480px
+  margin: auto
+  margin-bottom: $s*2
+  margin-top: $s*2
+
+main, header
+  max-width: 480px
+  overflow: hidden
+  margin: auto
+
+.red-menace
+  font-weight: bold
+  color: red
+
+.vault-tec
+  color: #FEF265
+
+h2
+  padding: $s
+  text-align: center
+  font-weight: normal
+  margin-bottom: $s*2
+  margin-top: $s*2
+  font-size: $s*1.25
+
+.green
+  color: #1AFF80
+  &--title
+    color: #1AFF80
+    background-color: rgba(26,255,128, 0.25)
+    transform: rotate(3deg)
+    padding-right: $s+1000px
+    padding-left: $s+1000px
+    margin-left: -1000px
+    margin-right: -1000px
+
+.orange
+  color: #FFB641
+
+.vault
+  color: #FEF265
+  &--title
+    background-color: #447AB9
+
+.vegas
+  color: #FFB641
+  background-color: rgba(255,182,65,0.25)
+.angel
+  float: left
+  width: 150px
+  margin-right: $s
+  margin-bottom: $s
+.roman
+  float: left
+
+.fine-print
+  font-size: $s/2
+  line-height: $s/2
+  margin-bottom: $s/4
+  margin-top: $s/4
+.vault-tec-sign-out
+  color: #447AB9
+  text-align: center
+
+.watch
+  width: 100%
+.download
+  color: #447AB9
+  display: block
+  text-align: center
+  width: 100%
+  font-size: $s*1.5
